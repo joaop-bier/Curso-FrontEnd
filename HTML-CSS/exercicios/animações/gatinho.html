@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática - Animação(Gatinho Andando)</title>
+
+    <style>
+        #cat{
+            width: 400px;
+            height: 200px;
+            background-color: gray;
+            background-image: url(walking_sprite.png);
+            background-position: 0px 0px;
+            background-repeat: no-repeat;
+            animation: andar 1s steps(12) 0s infinite normal;
+        }
+
+        @keyframes andar {
+            0%{
+                background-position: 0px 0px;
+            }
+
+            100%{
+                background-position: 0px -2400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Gatito andando</h1>
+    <div id="cat"></div>
+</body>
+</html>

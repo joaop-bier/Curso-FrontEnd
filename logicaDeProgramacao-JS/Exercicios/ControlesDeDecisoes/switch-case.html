@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - Switch Case</title>
+</head>
+<body>
+    <h1>Exercicio</h1>
+    <p>1. Usuário digitar um número de 0 a 3 e dizer o dia da semana(segunda, terça...)</p>
+    <p>2. Usar Switch Case</p>
+    <p>3. Caso digitar um valor inválido retorna uma mensagem</p>
+
+    <script>
+        let numero = parseInt(prompt("Digite um número de 0 a 3: "))
+
+        switch(numero){
+            case 0:
+                alert("Segunda-feira")
+                break
+            
+            case 1:
+                alert("Terça-feira")
+                break
+
+            case 2:
+                alert("Quarta-feira")
+                break
+
+            case 3:
+                alert("Quinta-feira")
+                break
+
+            default:
+                alert("Digite um valor entre 0 a 3!")
+        }
+            
+    </script>
+</body>
+</html>

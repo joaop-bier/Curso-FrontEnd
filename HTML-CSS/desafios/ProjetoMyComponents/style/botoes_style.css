@@ -1,0 +1,46 @@
+#destaque > p{
+    margin-top: 0px;
+}
+
+.container_button{
+    display: flex;
+    flex-direction: row;
+}
+
+.container_button > .bttns_group{
+    padding: 0px 0px 0px 50px;
+    width: 450px;
+    
+}
+
+.bttns_group > button{
+    padding: 10px;
+    margin: 20px 10px 0px 0px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.font-padrao{
+    font-size: 13px;
+}
+
+.font-20px{
+    font-size: 20px;
+}
+
+.bttn_border{
+    border: 2px solid #1c1c1c;
+    background-color: #282828;
+}
+
+.bttn_outline{
+    border: 0px solid;
+    background-color: transparent;
+    outline: 2px solid #1c1c1c;
+}
+
+.bttn_full{
+    width: 100%;
+    height: 45px;
+}

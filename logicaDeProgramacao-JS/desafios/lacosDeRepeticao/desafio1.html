@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Laços de repetição</title>
+</head>
+<body>
+    <h1>Desafio</h1>
+    <p>Pedir para o usuário digitar um número e mostrar todos os números pares do 2(inclusive) até o número que o usuário digitou</p>
+
+    <script>
+        let numero = parseInt(prompt("Digite um número: "))
+
+        document.write(`O usuário digitou o número ${numero} e esse são os numeros pares que tem até chegar em ${numero}:`)
+        for(i = 1; i <= numero; i++){
+            let verif_par = (i % 2) == 0
+                if(verif_par == true){
+                    document.write("<br>" + i + "<br>")
+                }
+        }
+    </script>
+</body>
+</html>

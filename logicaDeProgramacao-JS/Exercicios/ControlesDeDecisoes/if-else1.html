@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - If Else</title>
+</head>
+<body>
+    <h1>Exercicio 1</h1>
+    <p>1. Pedir 2 notas por usuario</p>
+    <p>Se a media for  maior ou igual a 6.5 = Aprovado</p>
+    <p>Se for menor que 6.5 = Reprovado</p>
+
+    <script>
+        let nota = Number(prompt("Digite a primeira nota: "))
+        let nota2 = Number(prompt("Digite a segunda nota: "))
+
+        let media = ((nota + nota2) / 2)
+        
+        if(media >= 6.5){
+            alert("Parabéns você passou de ano!!")
+        }
+
+        else{
+            alert("Infelizmente você reprovou :(")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Operadores Lógicos</title>
+</head>
+<body>
+    <h1>Desafio - Operadores Lógicos</h1>
+    <p>Pedir para o usuário digitar dois números entre 0 e 10 e mostrar na tela um boolean indicando se a média é menor ou igual 4. Porém, caso um único número seja 0, deve mostrar true</p>
+
+    <script>
+        let nota1 = Number(prompt("Digite um número: "))
+        let nota2 = Number(prompt("Digite outro número: "))
+
+        let media = ((nota1 + nota2) / 2)
+        let verif_media = (media <= 4)
+
+        let verif_final = verif_media || nota1 == 0 || nota2 == 0
+
+        alert("Está reprovado? : " + verif_final)
+    </script>
+</body>
+</html>

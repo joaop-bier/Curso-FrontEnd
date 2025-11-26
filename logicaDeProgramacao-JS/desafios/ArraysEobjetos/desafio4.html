@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 4 - Arrays e Objetos</title>
+</head>
+<body>
+    <h1>Desafio 4 - Arrays e Objetos</h1>
+    <p>Dado um array que pode conter valores de tipos diferentes, mostre num alert um boolean indicando se encontrou um dos seguintes valores nesse array: null, undefined ou Nan</p>
+
+    <script>
+        let array = [2,"pato",4,true,NaN,"lapis","1",8,7,1,5,3,5,7,1]
+        let verifArray
+        let verifBoolean
+        for(i = 0; i < array.length; i++){
+            verif = array[i]
+            if(typeof(verif) === "object" || typeof(verif) === "undefined" || Number.isNaN(array[i])){
+               verifBoolean = true 
+               break
+            }
+        }
+
+        alert(verifBoolean)
+
+    </script>
+</body>
+</html>

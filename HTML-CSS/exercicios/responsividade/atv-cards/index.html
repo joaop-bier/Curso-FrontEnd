@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade - Cards</title>
+    <style>
+
+        body{
+            background-image: url("responsividade_imagens/bg-2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        div#container{
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(158, 255, 205);
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        div#container img{
+            margin: auto;
+        }
+
+        div#container #text-container button{
+            border: 0px solid;
+            width: 200px;
+            padding: 5px;
+            color: white;
+            background-color: chocolate;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: 53.125em){
+            div#container{
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(158, 255, 205);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        div#container #text-container{
+            margin-left: 50px;
+        }
+    }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <img src="responsividade_imagens/card_02.jpg" alt="">
+        
+        <div id="text-container">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque debitis aut, nam unde sapiente sunt eum tempore fugit odio earum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sunt quod ipsum!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit.</p>
+            <button>Clique</button>
+        </div>
+    </div>
+</body>
+</html>

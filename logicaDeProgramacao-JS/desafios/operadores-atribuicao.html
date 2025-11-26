@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Operadores De Atribuição</title>
+</head>
+<body>
+    <h1>Desafio - Operadores De Atribuição</h1>
+    <p style="font-size: 30px; color:red;">Atenção: PARA ESSE EXERCÍCIO, VOCÊ PODE CRIAR APENAS UMA ÚNICA VARIÁVEL</p>
+    <p>1. Crie uma variável e atribua o valor 10</p>
+    <p>2. Soma 5 à essa variável e reatribua o valor</p>
+    <p>3. Multiplique o valor da variável por 5 e reatribua o valor</p>
+    <p>4. Soma 1 à variável e reatribua o novo valor</p>
+    <p>5. Sem alterar o valor da variável, mostre na tela o resto da divisão por 6 <br> a mensagem deve ser: o resto da divisão de (variável) por 6 é (resultado)</p>
+    <p>6. Sem alterar o valor da variável, mostre na tela o resto da divisão por 6 elevado ao quadrado <br> a mensagem deve ser: O quadrado do resto da divisão de (variável) por 6 é (resultado)</p>
+    <p>7. Mostre na tela o valor da variável</p>
+    <p>8. agora divida o valor da variável por 4 e reatribua o valor</p>
+    <p>9. Qual o valor da varíavel ?</p>
+    
+    <script>
+        let numero = 10
+        numero += 5
+        numero *= 5
+        numero += 1
+
+        alert("O resto da divisão de " + numero + " por 6 é " + (numero % 6))
+        alert("O quadrado do resto da divisão de " + (numero % 6) + " por 6 é " + ((numero % 6) ** 2))
+        alert("O valor da variável original é: " + numero)
+
+        numero /= 4
+
+        alert("O valor da variável divida por 4 agora é : " + numero)
+    </script>
+</body>
+</html>

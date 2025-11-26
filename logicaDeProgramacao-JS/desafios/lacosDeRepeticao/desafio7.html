@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 7 - Laços de repetição</title>
+</head>
+<body>
+    <h1>Desafio 7 - laços de repetição</h1>
+    <p>Mostre na tela todos os anos bissextos segundo a regra do mundo real(procure na internet como saber se um número é bissexto ou não)</p>
+
+    <p>regra: </p>
+    <ul>
+        <li>Divisível por 4 → Pode ser bissexto.</li>
+        <li>Se também for divisível por 100 → não é bissexto, a menos que…</li>
+        <li>Se for divisível por 400 → Então é bissexto.</li>
+    </ul>
+
+    <script>
+
+        for(ano = 1024; ano <= 2025; ano++)
+            if(ano % 4 == 0 && ano % 100 !== 0){
+                document.write("O ano " + ano + " é bissexto <br>")
+            }else if(ano % 4 == 0 && ano % 100 == 0 && ano % 400 == 0){
+                document.write("O ano " + ano + " é bissexto <br>")
+            }else{
+                document.write("O ano " + ano + " não é bissexto <br>")
+        
+        }
+    </script>
+</body>
+</html>

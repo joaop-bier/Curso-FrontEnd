@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica-flex-pt.2</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+        }
+
+        header{
+            display: inline-block;
+        }
+
+        #container-menu{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 80px;
+            padding: 50px;
+            height: 36.5vw;
+            background-color: rgb(255, 149, 149);
+            gap: 45px;
+        }
+        
+
+        nav > a{
+            color: black;
+            text-decoration: none;
+            font-size: 28px;
+            
+        }
+
+        a:hover{
+            font-size: 30px;
+            text-decoration: underline;
+            transition-duration: 1s;
+        }
+
+        main{
+            display: inline-block;
+            width: 80%;
+        }
+
+
+        #titulo-principal{
+            text-align: center;
+        }
+
+        article{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .produto{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 250px;
+            border: 2px solid black;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 6px 2px 12px rgba(83, 83, 83, 0.76);
+        }
+
+        img{
+            display: inline-block;
+            margin: auto;
+            width: 130px;
+            height: 130px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav id="container-menu">
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">Produtos</a>
+            <a href="#">Suporte</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1 id="titulo-principal">Produtos Lego</h1>
+            <article>
+
+                
+
+                <div class="produto">
+                    <h2>Produto 1:</h2>
+                    <img src="imgs-atv2/1.jpg" alt="">
+                </div>
+
+                <div class="produto">
+                    <h2>Produto 2:</h2>
+                    <img src="imgs-atv2/2.jpg" alt="">
+                </div>
+
+                <div class="produto">
+                    <h2>Produto 3:</h2>
+                    <img src="imgs-atv2/3.jpg" alt="">
+                </div>
+
+                <div class="produto">
+                    <h2>Produto 4:</h2>
+                    <img src="imgs-atv2/5.jpg" alt="">
+                </div>
+
+                <div class="produto">
+                    <h2>Produto 5:</h2>
+                    <img src="imgs-atv2/6.jpg" alt="">
+                </div>
+
+                <div class="produto">
+                    <h2>Produto 6:</h2>
+                    <img src="imgs-atv2/8.jpg" alt="">
+                </div>
+
+            </article>
+        </section>
+    </main>
+</body>
+</html>

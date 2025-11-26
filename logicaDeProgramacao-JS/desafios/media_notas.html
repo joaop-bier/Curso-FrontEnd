@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Média Alunos</title>
+</head>
+<body>
+    <h1>Médias Dos alunos</h1>
+    <p>1. Pedir 3 notas</p>
+    <p>2. Mostrar a média das Notas</p>
+
+    <script>
+        let nota1 = Number(prompt("Digite a nota do primeiro trimestre(Matéria Geografia): "))
+        let nota2 = Number(prompt("Digite a nota do segundo trimestre(Matéria Geografia): "))
+        let nota3 = Number(prompt("Digite a nota do terceiro trimestre(Matéria Geografia): "))
+
+        let media = (nota1 + nota2 + nota3) / 3
+
+        alert("A média é: " + media.toFixed(1))
+        
+    </script>
+</body>
+</html>

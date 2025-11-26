@@ -1,0 +1,178 @@
+@media screen and (min-width: 600px){
+    
+    body{
+        text-align: left;
+    }
+    
+    p{
+        font-size: 18px;
+    }
+    
+    .content-wrapper-center {
+    padding: 2rem 5rem;
+    }
+    
+    .header {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: center;
+    }
+
+    .menu-btn{
+        display: none;
+    }
+
+    .header a#logo-digital {
+        grid-column: 1 / span 4;
+    }
+
+    .header nav {
+        grid-column: 6 / -1;
+    }
+
+    .header-menu {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+
+    .header-menu a {
+        display: inline-block;
+        padding: 10px;
+    }
+
+    .hero{
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        align-items: center;
+    }
+
+    .hero .content{
+        grid-column: 1 / span 12;
+    }
+
+    .hero_title{
+        font-size: 56px;
+        margin-bottom: 50px;
+    }
+    .hero > img{
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-column: 1 / span 12;
+    }
+
+    .brands > ul{
+        display: flex;
+        gap: 40px;
+        justify-content: space-around;
+    }
+
+    #sobre{
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(12,1fr);
+        align-items: center;
+    }
+
+    #sobre article{
+        grid-column: 8 / 12;
+    }
+
+    #sobre article h2{
+        font-size: 40px;
+    }
+
+    #sobre article p{
+        width: 85%;
+    }
+
+    #sobre > img{
+        width: 100%;
+        grid-column: 1 / span 6;
+    }
+
+    .results{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+    }
+
+    .results > article{
+        grid-column: 1 / span 6;
+    }
+
+    .results article h2{
+        font-size: 46px;
+    }
+
+    .results img{
+        grid-column: 8 / span 4;
+    }
+
+    .testemunhos_wrapper{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .testemunhos_wrapper .testemunho{
+        grid-column: span 12;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: center;
+        gap: 20px;
+    }
+
+    .testemunho .testemunho_thumb{
+        grid-column: 1 / span 4;
+    }
+
+    .testemunho .testemunho_content{
+        grid-column: 5 / -1;
+    }
+
+    .contato{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+    }
+
+    .contato .contato_image{
+        display: block;
+        grid-column: 1 / span 12;
+    }
+
+    .contato .contato_content{
+        grid-column: 1 / span 12;
+    }
+
+    .contato_content .contato_title{
+        font-size: 46px;
+    }
+
+    #footer-grid{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        align-items: start;
+        gap: 20px 10px;
+    }
+
+    #footer-grid .section-info{
+        grid-column: 1 / span 3;
+    }
+
+    #footer-grid .section-company{
+        grid-column: 12;
+        padding-top: 0px;
+        padding-right: 0px;
+    }
+
+    #footer-grid .section-contact{
+        grid-column: 1 / span 2;
+        padding-top: 0px;
+        padding-right: 0px;
+    }
+
+    .footer-sections{
+        width: 200px;
+    }
+}

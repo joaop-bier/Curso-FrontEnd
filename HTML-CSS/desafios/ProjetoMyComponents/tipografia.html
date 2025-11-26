@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My lib - Tipografia</title>
+
+    <link rel="stylesheet" href="style/style_padrao.css">
+    <link rel="stylesheet" href="style/tipografia_style.css">
+</head>
+<body>
+    <header id="menu_primacy">
+        <img src="imagens/perfil.png" alt="foto de perfil">
+
+        <nav id="container_links-pags">
+            <a href="index.html" class="links_pags">Home</a>
+            <a href="tipografia.html" class="links_pags" id="pag_atual">Tipografia</a>
+            <a href="cards.html" class="links_pags">Cards</a>
+            <a href="lista.html" class="links_pags">Listas</a>
+            <a href="formulario.html" class="links_pags">Formulário</a>
+            <a href="botoes.html" class="links_pags">Botões</a>
+            <a href="tabelas.html" class="links_pags">tabelas</a>
+        </nav>
+    </header>
+
+
+    <main id="main_components">
+        <section class="section_component">
+            <article class="content_style">
+
+                 <header id="title_component">
+                    <h1>My Component</h1>
+                </header>
+
+                <div id="destaque">
+                    <h2 class="style_orange">Tipografia</h2>
+                    <p>A Tipografia transmite nossas definições de tamanhos e espaçamento e deve ser utilizada respeitando a hierarquia dos elementos na interface</p>
+                </div>
+
+            </article>
+        </section>
+
+
+
+        <section class="section_component">
+            <article class="content_style">
+
+                <h3 class="style_orange">Elements</h3>
+
+                <div class="exemplos-tipografia">
+                    <h4 class="style_orange">Text</h4>
+                    <p>Isso é um <b>negrito</b> e isso é em <strong>strong</strong>. Isso é em <i>italic</i> e isso é <em>enfatizar</em>. Isso é um texto <sup>sobrescrito</sup> e isso é um texto <sub>subscrito</sub> isto é um texto escrito <u id="sublinhado">errado</u> e isso é um <code>código for(;;;) (....)</code>.Finalmente,isso é um <a href="#" id="style_link">link</a></p>
+                </div>
+
+
+                <div class="exemplos-tipografia">
+                    <h4 class="style_orange">Citações</h4>
+                    <p>De acordo com o site <strong>Mozilla</strong>,<q>firefox 1.0 foi lançado em 2004 e. se tornou um grande sucesso</q></p>
+                    <blockquote cite="https://exemplo.com/fonte">Isto é um paragráfo de citação. Indica que o texto incluído é uma longa citação. Normalmente, este é processado visualmente pelo recuo. Uma URL para a fonte da citação pode ser dada usando o atributo cite</blockquote>
+                </div>
+
+
+                <div class="exemplos-tipografia">
+                    <h4 class="style_orange">Abreviações</h4>
+                    <p>podemos usar <abbr title="Cascading Style Sheets">CSS</abbr> para estilizar nossos arquivos <abbr title="HyperText Markup Language">HTML</abbr></p>
+                </div>
+
+
+                <div class="exemplos-tipografia">
+                    <h4 class="style_orange">sobrescrito e subscrito</h4>
+                    <p>Ocasionalmente, você precisará usar sobrescrito e subscrito ao marcar itens como datas, fórmulas químicas e equações matemáticas para que tenham o significado correto</p>
+                    <p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2-</sub></p>
+                    <p>If x<sub>2</sub> is 9, x must equal 3 or -3.</p>
+                </div>
+
+
+                <div class="exemplos-tipografia">
+                    <h4 class="style_orange">"Coisas" de computador</h4>
+                    <p>Use tags corretas para representar elementos como teclas, trechos de código, código de saída etc</p>
+                    <p>Pressione <code>CTRL + c</code> para copiar.</p>
+                    <p>Utilize a tag <code>kbd</code> para representar uma entrada do teclado</p>
+                    <pre><code>
+                    a tag pre,formata levando em consideração as quebras de linha, os espaços.
+                
+
+
+                    &lt;script&gt;
+                        alert('oi');
+                    &lt;script&gt;
+
+
+
+                </code></pre>
+
+                </div>
+
+
+                <div class="exemplos-tipografia">
+                    <h4  class="style_orange">Horários e datas</h4>
+                    <p>O HTML também fornece o elemento <code>&lt;time&gt;</code> para marcar horas e datas em um formato legível por máquina. Imagine uma página de eventos</p>
+
+                    <h5  class="style_orange">Evento sobre <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr></h5>
+                    <p>O evento ocorrerá em <time datetime="2018-09-15">15 de Setembro de 2018</time></p>
+                    <p>O evento ocorrerá em <time datetime="2018-09-15">15/09/2018</time></p>
+                    <p>O evento ocorrerá em <time datetime="2018-09-15">15/09/18 - 20:00</time></p>
+
+                    <h5  class="style_orange">Confirme sua presença</h5>
+                    <p>O agendamento está marcado para <time datetime="18:00">18h00</time></p>
+                    <p>Aprender semântica HTML é <del>complicado</del> <ins>fácil</ins></p>
+                    <p>O evento JS Conference será em Agosto</p>
+                </div>
+            </article>
+        </section>
+        
+    </main>
+</body>
+</html>

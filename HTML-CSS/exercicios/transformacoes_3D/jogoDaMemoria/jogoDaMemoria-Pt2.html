@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Da Memoria - PT2</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            height: 100vh;
+            margin: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: rgb(51, 51, 106);
+        }
+
+        h1{
+            color: white;
+            font-size: 35px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        div#container-cards{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,1fr);
+            gap: 20px;
+        }
+
+        .card{
+            position: relative;
+            perspective: 300px;
+            transform-style: preserve-3d;
+            width: 120px;
+            height: 100px;
+            transition-duration: 0.5s;
+            transition-property: transform;
+        }
+
+        img{
+            object-fit: cover;
+            width: 120px;
+            height: 100px;
+        }
+
+        .card .back-side, .card .front-side{
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .card .back-side{
+            transform: rotateY(0deg);
+        }
+
+        .card .front-side{
+            transform: rotateY(180deg);
+        }
+
+        div#controls{
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+        }
+
+        body:has(input#check1[type="checkbox"]:checked) #container-cards #card1,
+        body:has(input#check2[type="checkbox"]:checked) #container-cards #card2,
+        body:has(input#check3[type="checkbox"]:checked) #container-cards #card3,
+        body:has(input#check4[type="checkbox"]:checked) #container-cards #card4,
+        body:has(input#check5[type="checkbox"]:checked) #container-cards #card5,
+        body:has(input#check6[type="checkbox"]:checked) #container-cards #card6,
+        body:has(input#check7[type="checkbox"]:checked) #container-cards #card7,
+        body:has(input#check8[type="checkbox"]:checked) #container-cards #card8,
+        body:has(input#check9[type="checkbox"]:checked) #container-cards #card9,
+        body:has(input#check10[type="checkbox"]:checked) #container-cards #card10,
+        body:has(input#check11[type="checkbox"]:checked) #container-cards #card11,
+        body:has(input#check12[type="checkbox"]:checked) #container-cards #card12,
+        body:has(input#check13[type="checkbox"]:checked) #container-cards #card13,
+        body:has(input#check14[type="checkbox"]:checked) #container-cards #card14,
+        body:has(input#check15[type="checkbox"]:checked) #container-cards #card15,
+        body:has(input#check16[type="checkbox"]:checked) #container-cards #card16{
+            transform: rotateY(180deg);
+        }
+
+        body:has(input#check1[type="checkbox"]:focus) #container-cards #card1,
+        body:has(input#check2[type="checkbox"]:focus) #container-cards #card2,
+        body:has(input#check3[type="checkbox"]:focus) #container-cards #card3,
+        body:has(input#check4[type="checkbox"]:focus) #container-cards #card4,
+        body:has(input#check5[type="checkbox"]:focus) #container-cards #card5,
+        body:has(input#check6[type="checkbox"]:focus) #container-cards #card6,
+        body:has(input#check7[type="checkbox"]:focus) #container-cards #card7,
+        body:has(input#check8[type="checkbox"]:focus) #container-cards #card8,
+        body:has(input#check9[type="checkbox"]:focus) #container-cards #card9,
+        body:has(input#check10[type="checkbox"]:focus) #container-cards #card10,
+        body:has(input#check11[type="checkbox"]:focus) #container-cards #card11,
+        body:has(input#check12[type="checkbox"]:focus) #container-cards #card12,
+        body:has(input#check13[type="checkbox"]:focus) #container-cards #card13,
+        body:has(input#check14[type="checkbox"]:focus) #container-cards #card14,
+        body:has(input#check15[type="checkbox"]:focus) #container-cards #card15,
+        body:has(input#check16[type="checkbox"]:focus) #container-cards #card16{
+            outline: 4px dotted red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Jogo da Memória - PT 2</h1>
+
+    <div id="controls">
+        <input type="checkbox" name="check1" id="check1">
+        <input type="checkbox" name="check2" id="check2">
+        <input type="checkbox" name="check3" id="check3">
+        <input type="checkbox" name="check4" id="check4">
+        <input type="checkbox" name="check5" id="check5">
+        <input type="checkbox" name="check6" id="check6">
+        <input type="checkbox" name="check7" id="check7">
+        <input type="checkbox" name="check8" id="check8">
+        <input type="checkbox" name="check9" id="check9">
+        <input type="checkbox" name="check10" id="check10">
+        <input type="checkbox" name="check11" id="check11">
+        <input type="checkbox" name="check12" id="check12">
+        <input type="checkbox" name="check13" id="check13">
+        <input type="checkbox" name="check14" id="check14">
+        <input type="checkbox" name="check15" id="check15">
+        <input type="checkbox" name="check16" id="check16">
+    </div>
+    <div id="container-cards">
+        <label for="check1" class="card" id="card1">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check2" class="card" id="card2">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check3" class="card" id="card3">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check4" class="card" id="card4">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check5" class="card" id="card5">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check6" class="card" id="card6">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check7" class="card" id="card7">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check8" class="card" id="card8">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check9" class="card" id="card9">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check10" class="card" id="card10">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check11" class="card" id="card11">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check12" class="card" id="card12">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check13" class="card" id="card13">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check14" class="card" id="card14">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check15" class="card" id="card15">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+
+        <label for="check16" class="card" id="card16">
+                <div class="back-side"><img src="img/back.png" alt="" ></div>
+                <div class="front-side"><img src="img/01.png" alt=""></div>
+        </label>
+    </div>
+
+</body>
+
+</html>

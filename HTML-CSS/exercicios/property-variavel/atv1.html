@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica property e variavel</title>
+
+    <style>
+
+
+        @property --rodando{
+            syntax: "<angle>";
+            inherits: true;
+            initial-value: 0deg;
+        }
+
+        :root{
+            --tamanho-p: 100px;
+            --color-div-background: green;
+        }
+
+        body{
+            height: 100vh;
+            margin: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        div{
+            background-color: var(--color-div-background);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div:hover{
+            transform: rotate(var(--rodando));
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate{
+            to{
+                --rodando:360deg;
+            }
+        }
+
+        p{
+            text-align: center;
+            font-size: var(--tamanho-p);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div>
+        <p>⟳</p>
+    </div>
+</body>
+</html>

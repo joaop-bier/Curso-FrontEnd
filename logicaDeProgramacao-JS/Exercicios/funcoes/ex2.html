@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2 - Funções</title>
+
+    <style>
+        fieldset{
+            border: 0px solid transparent;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        legend{
+            color: blue;
+            background-color: rgb(220, 217, 255);
+        }
+
+        div{
+            display: flex;
+            width: 300px;
+            flex-direction: column;
+        }
+
+        div > label{
+            color: rgb(255, 0, 0);
+        }
+
+        div > input{
+            height: 30px;
+        }
+
+        button{
+            color: white;
+            background-color: rgb(41, 41, 70);
+            border: 0px solid transparent;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #div-buttons{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercicio 2 - Funções</h1>
+    <p>Escrever um programa para calcular a área de um triâgulo</p>
+
+    <fieldset>
+        <legend>Calculo de Área(Triângulo)</legend>
+        <div>
+            <label for="numberBase">Base</label>
+            <input type="number" name="numberBase" id="numberBase">
+        </div>
+        <div>
+            <label for="numberAltura">Altura</label>
+            <input type="number" name="numberAltura" id="numberAltura">
+        </div>
+
+        <div id="div-buttons">
+            <button onclick="calcularArea()">Calcular área</button>
+            <button onclick="limpar()">Clear</button>
+        </div>
+
+        <div id="resultado"></div>
+    </fieldset>
+
+    <script>
+        const inputBase = document.getElementById("numberBase")
+        const inputAltura = document.getElementById("numberAltura")
+        let calcArea = 0
+        let resultado = document.getElementById("resultado")
+
+        function calcularArea(){
+            let numberBase = Number(inputBase.value)
+            let numberAltura = Number(inputAltura.value)
+            calcArea = (numberBase * numberAltura) / 2
+
+            resultado.innerHTML += `<br> a área é ${calcArea}`
+        }
+
+        function limpar(){
+            inputBase.value = ""
+            inputAltura.value = ""
+            resultado.innerHTML = ""
+        }
+    </script>
+</body>
+</html>

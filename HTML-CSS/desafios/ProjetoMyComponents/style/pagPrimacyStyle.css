@@ -1,0 +1,29 @@
+#style_link-Serliv{
+    text-decoration: underline;
+    font-size: 19px;
+}
+
+.link_redes-sociais{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    gap: 15px;
+    margin-left: 50px;
+}
+
+.link_redes-sociais .icon{
+    width: 35px;
+    height: 35px;
+}
+
+.link_redes-sociais,.link_redes-sociais .icon{
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+    transition-timing-function: linear
+}
+
+.link_redes-sociais:hover,.link_redes-sociais .icon:hover{
+    color: rgb(230, 103, 11);
+}

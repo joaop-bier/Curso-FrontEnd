@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1 - Arrays</title>
+</head>
+<body>
+    <h1>Exercicio 1 - Arrays</h1>
+    <p>Pedir para o usuário quantas notas ele deseja adicionar e dizer a média geral</p>
+
+    <script>
+        let numerosNotas = Number(prompt("Digite quantas notas você deseja adicionar: "))
+        let notas = []
+        let media = 0
+        let soma = 0
+        
+        
+        for(i = 1; i <= numerosNotas; i++){
+            let nota = Number(prompt("Digite a sua " + i + " nota que deseja adicionar: "))
+            notas.push(nota)
+            soma += nota
+        }
+
+        media = soma/numerosNotas
+
+        alert(`Notas digitadas : [${notas.join()}]`)
+        alert(`A média geral é: ${media.toFixed(1)}`)
+    </script>
+</body>
+</html>

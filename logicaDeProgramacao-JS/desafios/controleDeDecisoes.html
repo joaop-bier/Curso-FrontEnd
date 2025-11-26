@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Controle De Decisão</title>
+</head>
+<body>
+    <h1 style="font-size: 35px; color: rgb(49, 49, 116);">Desafio - Controles de Decisão </h1>
+    <p>1 - Pedir para o usuário digitar 2 números e mostrar a mensagem "APROVADO!" caso a média seja maior que 4 e nenhuna nota seja igual à 0</p>
+    <p>2 - Mostre a mensagem "REPROVADO" caso a média seja menor ou igual à 4 ou exista pelo menos uma nota igual à 0</p>
+
+    <script>
+        "use strict"
+        alert("Olá seja bem vindo :)")
+
+        let nota1 = Number(prompt("Digite a nota do primeiro trimestre em Matemática: "))
+        let nota2 = Number(prompt("Digite a nota do segundo trimestre em Matemática: "))
+
+        let media = ((nota1 + nota2) / 2)
+
+        if (media > 4 && (nota1 != 0 && nota2 != 0)){
+            alert("APROVADO com média de " + media.toFixed(2))
+        }
+        else{
+            alert("Reprovado")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFusion - Desafio</title>
+
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tablet_style.css">
+</head>
+<body>
+    
+    <header id="nav-menu">
+        <h1>DevFusion</h1>
+
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#section-services">Serviços</a>
+            <a href="#section-projects">Portfólio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero-container">
+            <article id="hero-content">
+
+                <div id="hero-text">
+                    <h2>Construindo Soluções <br> digitas sob medida</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut tenetur sunt porro.</p>
+                    <button id="action_user">Solicitar orçamento</button>
+                </div>
+
+                <img src="imgs/img-DevFusion.png" alt="">
+            </article>
+        </section>
+
+        <section id="section-services">
+            <article id="servicos">
+                    <h2>Serviços</h2>
+
+                    <div id="habilites-developer">
+                        <div class="cards-habilites">
+                            <img src="icons/icomoon/SVG/display.svg" alt="" class="services-icons">
+                            <h3>Desenvolvimento</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        </div>
+                        <div class="cards-habilites">
+                            <img src="icons/icomoon/SVG/pencil.svg" alt="" class="services-icons">
+                            <h3>UX/UI Design</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        </div>
+                        <div class="cards-habilites">
+                            <img src="icons/icomoon/SVG/file-zip.svg" alt="" class="services-icons">
+                            <h3>SED</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        </div>
+                        <div class="cards-habilites">
+                            <img src="icons/icomoon/SVG/newspaper.svg" alt="" class="services-icons">
+                            <h3>Celas</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        </div>
+                    </div>
+            </article>
+        </section>
+
+        <section id="section-projects">
+            <article id="projects">
+                <h2>Portfólio</h2>
+
+                <div id="container-projects">
+                    <div class="cards-projects">
+                        <h3>Project: Netflix</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, corrupti?</p>
+                        <button popovertarget="project-netflix" class="buttons-projects">Visualizar Projeto</button>
+
+                        <div id="project-netflix" class="projects-popover" popover>
+                            <img src="imgs/img-ficticio-netflix.png" alt="">
+                        </div>
+                    </div>
+                    <div class="cards-projects">
+                        <h3>Project: Twitter</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, ipsa!</p>
+                        <button popovertarget="project-twitter" class="buttons-projects">Visualizar Projeto</button>
+
+                        <div id="project-twitter" class="projects-popover" popover>
+                            <img src="imgs/img-ficticio-twitter.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+       </section>
+
+       <section id="section-contact">
+            <article id="article-form">
+                <form action="" method="get" id="form-contato">
+                    <fieldset>
+                        <legend>Contato</legend>
+
+                        <label for="nameUser">Nome</label>
+                        <input type="text" name="nameUser" id="nameUser" required placeholder="Ex: José Antonio" autocomplete="off">
+
+                        <label for="emailUser">Email</label>
+                        <input type="email" name="emailUser" id="emailUser" required placeholder="Ex: Test12@gmail.com" autocomplete="off">
+
+                        <input type="submit" value="Enviar">
+                    </fieldset>
+                </form>
+            </article>
+       </section>
+    </main>
+    
+    <footer id="rodape">
+
+            <h2>Redes Socias</h2>
+            <div id="container-redes_socias">
+                <a href="#"><img src="icons/icomoon/SVG/instagram.svg" alt=""></a>
+                <a href="#"><img src="icons/icomoon/SVG/twitter.svg" alt=""></a>
+                <a href="#"><img src="icons/icomoon/PNG/facebook2.png" alt=""></a>
+            </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - Operadores de Comparação e lógicos</title>
+
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exercicio 1:</h1>
+    <ol>
+        <li>Peça para o usuário digitar:
+                <ul>
+                    <li>a idade dele.</li>
+                    <li>se possui carteira de motorista (resposta "sim" ou "não").</li>
+                </ul>
+        </li>
+
+        <li>O programa deve verificar:
+                <ul>
+                    <li>Se a idade é maior ou igual a <b>18</b>.</li>
+                    <li>Se o usuário respondeu que tem carteira de motorista.</li>
+                </ul>
+        </li>
+
+        <li>Use operadores de <b>comparação (`>`, `<`, `>=`, `===`) e lógicos (`&&`, `||`, `!`)</b> para:
+                <ul>
+                    <li>Exibir `true` se a pessoa **pode dirigir** (idade ≥ 18 **E** tem carteira).</li>
+                    <li>Exibir `false` caso contrário.</li>
+                    <li>Exibir também `true` se a pessoa tem **mais de 70 anos OU menos de 18**, indicando que ela está fora da idade "ideal" para dirigir.</li>
+                </ul>
+        </li>
+    </ol>
+
+    <script>
+        let idade = parseInt(prompt("Digite a sua idade: "))
+        let respota = String(prompt("você possui carteira de motorista?(SIM OU NÃO) : "))
+
+        alert("O usuário pode dirigir? (Possuir idade maior ou igual a 18 e ter carteira) : " + (idade >= 18 && respota == 'SIM'))
+
+        let foraDoIdeal = (idade < 18 || idade > 70)
+        alert("O usuário está fora da idade ideal para digirir? (Se tiver mais de 70 anos OU menos de 18) : " + foraDoIdeal)
+    </script>
+</body>
+</html>

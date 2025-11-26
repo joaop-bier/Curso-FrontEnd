@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My lib - Listas</title>
+
+    <link rel="stylesheet" href="style/style_padrao.css">
+    <link rel="stylesheet" href="style/lista_style.css">
+</head>
+<body>
+    
+    <header id="menu_primacy">
+        <img src="imagens/perfil.png" alt="foto de perfil">
+
+        <nav id="container_links-pags">
+            <a href="index.html" class="links_pags">Home</a>
+            <a href="tipografia.html" class="links_pags">Tipografia</a>
+            <a href="cards.html" class="links_pags">Cards</a>
+            <a href="lista.html" class="links_pags"  id="pag_atual">Listas</a>
+            <a href="formulario.html" class="links_pags">Formulário</a>
+            <a href="botoes.html" class="links_pags">Botões</a>
+            <a href="tabelas.html" class="links_pags">tabelas</a>
+        </nav>
+    </header>
+
+     <main id="main_components">
+
+        <section class="section_component">
+            <article class="content_style">
+
+                 <header id="title_component">
+                    <h1>My Component</h1>
+                </header>
+
+                <div id="destaque">
+                    <h2 class="style_orange">Listas</h2>
+                    <p>Listas são estruturas usadas para organizar itens de forma ordenada ou não ordenada. Elas são úteis para apresentar informações de forma clara e sequencial, como tarefas, passos de um processo ou agrupamentos de conteúdos relacionados.
+
+                </div>
+            </article>
+        </section>
+
+        
+        <section class="section_component" id="lista_section-component">
+            <article class="content_style" id="article_list">
+
+                <div class="list_container">
+                    <h3 class="style_orange">Não Ordenada</h3>
+                    <ul>
+                        <li>item 1</li>
+                        <li>item 2</li>
+                        <li>item 3</li>
+                    </ul>
+                </div>
+
+                <div class="list_container">
+                    <h3 class="style_orange">Ordenada</h3>
+                    <ol>
+                        <li>item 1</li>
+                        <li>item 2</li>
+                        <li>item 3</li>
+                    </ol>
+                </div>
+
+                <div class="list_container">
+                    <h3 class="style_orange">Alternates</h3>
+                    <ul id="list_alternate">
+                        <li>item 1</li>
+                        <li>item 2</li>
+                        <li>item 3</li>
+                    </ul>
+                </div>
+
+                <div class="list_container">
+                    <h3 class="style_orange">Não Ordenada</h3>
+                    <ul>
+                        <li>item 1</li>
+                            
+                        <li>item 2
+                            <ul>
+                                <li>Item 2.1</li>
+                                <li>Item 2.2</li>
+                            </ul>
+                        </li>
+                        <li>item 3
+                            <ul>
+                                <li>Item 3.1</li>
+                                    <ul>
+                                        <li>Item 3.1.1</li>
+                                    </ul>
+                                <li>Item 3.2</li>
+                            </ul>
+                        </li>
+                            
+                    </ul>
+                </div>
+
+                <div class="list_container">
+                    <h3 class="style_orange">Ordenadas</h3>
+                    <ol type="A" start="6">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                            <ol>
+                                <li>Item 2.1</li>
+                                <li>Item 2.2
+                                    <ol>
+                                        <li>Item 2.1.1</li>
+                                    </ol>
+                                </li>
+                                    
+                            </ol>
+                    </ol>
+                </div>
+       
+                <div class="list_container">
+                    <h3 class="style_orange">Ambas</h3>
+                    <ol id="list_ambas">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                            <ul>
+                                <li>Item 2.1</li>
+                                <li>Item 2.2</li>
+                                <li>Item 2.3</li>
+                            </ul>
+                    </ol>
+                </div>
+                
+            </article>
+        </section>
+
+    </main>
+</body>
+</html>

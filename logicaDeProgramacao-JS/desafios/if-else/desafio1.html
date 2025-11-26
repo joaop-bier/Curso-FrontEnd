@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1 - IF ELSE</title>
+</head>
+<body>
+    <h1>Desafio 1 :</h1>
+    <p>Foi pedido para o usuário digitar 0 a 10, mas o engraçadinho digitar 15, o que fazer?</p>
+
+    <script>
+        let nota = Number(prompt("Digite a primeira nota: "))
+        let nota2 = Number(prompt("Digite a segunda nota: "))
+
+        
+
+        if(nota > 10 || nota < 0 || nota2 > 10 || nota2 < 0){
+            alert("você digitou um valor INVÁLIDO, apenas número menores ou igual a 10")
+        }
+        else{
+            let media = ((nota + nota2) / 2)
+            alert("Sua média é : " + media)
+        }
+    </script>
+</body>
+</html>

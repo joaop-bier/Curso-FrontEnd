@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1 - Funções</title>
+</head>
+<body>
+    <h1>Exercicio 1 - Funções</h1>
+    <p>Mostrar a tabuada com um input, ao apertar o botão</p>
+
+    <input type="number" id="number-tab" name="number">
+    <button onclick="mostrarTabuada()">Mostrar Tabuada</button>
+    <button onclick="limpar()">Clear</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        let inputTab = document.getElementById("number-tab")
+        let resultado = document.getElementById("resultado")
+
+        function mostrarTabuada(){
+            let inputValue = parseInt(inputTab.value) 
+
+            for(let i = 0; i <= 10; i++){
+                resultado.innerHTML += (`${inputValue} * ${i} = ${inputValue * i} <br>`)
+
+            }
+        }
+ 
+        function limpar(){
+            resultado.innerHTML = ""
+        }
+
+        
+    </script>
+</body>
+</html>

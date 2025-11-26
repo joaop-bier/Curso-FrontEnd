@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1 - Estruturas Complexas</title>
+</head>
+<body>
+    <h1>Desafio 1 - Estruturas Complexas</h1>
+    <p>Mostre em uma lista o nome e a média de cada aluno</p>
+
+
+        <ul id="list-aluno"></ul>
+
+        <script>
+            let alunos = [
+            {nome: "Junior", notas: [3,6.7,5.8,9.6]},
+            {nome: "Donald Junior", notas: [8,6.8,5.4,6.6]}]
+
+            let listaluno = document.getElementById("list-aluno")
+            let list = ""
+            let media = 0
+
+
+            for(i = 0; i < alunos.length; i++){
+                let soma = 0
+                list += "<li>Aluno: " + alunos[i].nome
+                    list += "<ul>"
+
+                        for(j = 0; j < alunos[i].notas.length; j++){
+                            soma += alunos[i].notas[j]
+                        }
+
+                        media = soma / alunos[i].notas.length
+                        list += "<li style = 'font-size:23px; color: green;'>Média: " + media.toFixed(1) + "</li>"
+                        
+                    list += "</ul>"
+                list += "</li>"
+            }
+
+            listaluno.innerHTML = list
+        </script>
+</body>
+</html>

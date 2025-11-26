@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3 - Funções 3</title>
+</head>
+<body>
+    <h1>Construir uma função para calcular IMC</h1>
+
+    <p style="color:blue;">Requisitos</p>
+    <p>IMC = Peso / altura(sobe 2)</p>
+    <p>Deve receber peso, altura e uma função de callback opcional</p>
+    <p>Se não receber call-back, retornar o imc calculado</p>
+    <p>Se receber call-back, deve retornar o retorno do callback</p>
+
+    <script>
+        function imcCalc(peso, altura, cb){
+            let calc = (peso / (altura ** 2))
+
+            if(typeof(cb) ==="function"){
+                return cb(calc)
+            }
+
+            return console.log("Valor do IMC calculado: " + calc.toFixed(2))
+        }
+
+        imcCalc(65, 1.85)
+        imcCalc(44,1.55,retorneIMC)
+
+        function retorneIMC(calculo){
+            if(calculo < 18.5){
+                    return console.log("Abaixo do peso")
+                }
+                else if(calculo < 24.9){
+                    return console.log("Peso Normal")
+                }
+                else{
+                    return console.log("Sobrepeso")
+                }
+        }
+    </script>
+</body>
+</html>

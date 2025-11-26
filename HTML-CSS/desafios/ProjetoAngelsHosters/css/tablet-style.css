@@ -1,0 +1,81 @@
+@media screen and (min-width: 48em){
+    /* Tablet*/
+
+    :root{
+    --cor1: #632C77;
+    --cor1_light: #81359c;
+    --color_a-nav: #9b69ad;
+    --color_a-hero: #29dada;
+    }
+
+    #cabecalho-range{
+        justify-content: space-evenly;
+        flex-direction: row;
+        padding: 20px 0px;
+    }
+
+    #nav-range{
+        width: auto;
+        background-color: transparent;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #nav-range .link-nav{
+        color: var(--cor1);
+        padding: 0px;
+        font-size: 1.9rem;
+    }
+
+    #nav-range .link-nav:hover{
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+    }
+
+    #section-hero{
+        margin-top: 20px;
+        padding: 20px 0px;
+        background-color: var(--cor1);
+    }
+
+    #hero-container::before{
+        content: "";
+        display: block;
+        background-image: url(../images/icon_play.svg);
+        width: 100px;
+        height: 100px;
+    }
+
+    #section-hero #hero-container{
+        color: white;
+    }
+
+    #section-hero #hero-container > h1{
+        color: white;
+    }
+
+    #section-servicos{
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    #section-servicos > .servicoAngels{
+        width: 45%;
+    }
+
+    #tipos-hospedagem{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        padding: 20px;
+    }
+
+    #tipos-hospedagem > .hospedagem{
+        width: 100%;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+}

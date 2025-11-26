@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Operadores Aritméticos</title>
+</head>
+<body>
+    <h1>Desafio Operadores Aritméticos</h1>
+    <p>1. Pedri para o usúario digitar um número</p>
+    <p>2. Converter em número inteiro</p>
+    <p>3. Pedir para o usúario digitar outro número</p>
+    <p>4. Converter em número inteiro</p>
+    <p>5. Mostrar a divisão concatenando com o texto "a divisão é: ..."</p>
+    <p>6. Mostrar a multiplicação concatenando com o texto "a multiplicação é: ..."</p>
+    <p>7. Mostrar a subtração concatenando com o texto "a subtração é: ..."</p>
+    <p>8. Mostrar a soma concatenando com o texto "a soma é: ..."</p>
+
+    <script>
+        alert("Bem vindo a Calculadora dinâmica!!")
+
+        let numero1 = Number(prompt("Digite o primeiro número: "))
+        let numero2 = Number(prompt("Digite o segundo número: "))
+
+        let soma = numero1 + numero2
+        let subtracao = numero1 - numero2
+        let multiplicacao = numero1 * numero2
+        let divisao = numero1 / numero2
+
+        alert(
+        "A soma é:  " + soma + "\n" +
+        "A subtração é:  " + subtracao + "\n" +
+        "A multiplicação é:  " + multiplicacao + "\n" +
+        "A divisão é:  " + divisao
+        )
+
+    </script>
+</body>
+</html>

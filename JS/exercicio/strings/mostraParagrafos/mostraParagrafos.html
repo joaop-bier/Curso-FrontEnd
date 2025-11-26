@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+		integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		body {
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		button {
+			cursor: pointer;
+		}
+
+		#container {
+			width: 90%;
+			max-width: 600px;
+			margin: auto;
+		}
+
+		.card {
+			margin: 16px;
+			border: 1px solid #ccc;
+			padding: 16px 32px 32px 16px;
+			position: relative;
+		}
+
+		.card p {
+			margin: 0;
+		}
+
+		.card.text-hidden:after {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 64px;
+			background-image: linear-gradient(transparent, white 80%);
+			pointer-events: none;
+		}
+
+		.card button {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			background-color: transparent;
+			z-index: 1;
+			border: none;
+			font-size: 1.5em;
+		}
+
+		.card button:hover {
+			color: red;
+		}
+
+
+		body,
+		html {
+			height: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<div class="card">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		</div>
+
+		<div class="card">
+			<p>Lorem ipsum dolor sit amet.</p>
+		</div>
+		<div class="card">
+			<p>Lorem ipsum dolodr sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		;(function () {
+			const paragrafos = Array.from(document.querySelectorAll("#container .card p"))
+			const originText = paragrafos.map(function (p) {
+				return p.innerText
+			})
+
+			function escondeParagrafo(textP) {
+				textP.textContent = textP.innerText.substring(0, 100) + "..."
+				textP.parentElement.classList.add("text-hidden")
+			}
+
+			paragrafos.forEach(function (p) {
+				if (p.innerText.length > 100) {
+
+					escondeParagrafo(p)
+
+					const bttnChevronDown = document.createElement("button")
+					bttnChevronDown.innerHTML = '<i class="fa-solid fa-chevron-down"></i>'
+					const bttnChevronUp = document.createElement("button")
+					bttnChevronUp.innerHTML = '<i class="fa-solid fa-chevron-up"></i>'
+					p.parentElement.append(bttnChevronDown)
+
+					bttnChevronDown.addEventListener("click", function () {
+						let position = paragrafos.indexOf(bttnChevronDown.previousElementSibling)
+						console.log(position)
+						paragrafos[position].parentElement.classList.remove("text-hidden")
+						paragrafos[position].textContent = originText[position]
+
+						bttnChevronDown.remove()
+						p.parentElement.append(bttnChevronUp)
+					})
+
+					bttnChevronUp.addEventListener("click", function () {
+						escondeParagrafo(p)
+
+						bttnChevronUp.remove()
+						p.parentElement.append(bttnChevronDown)
+					})
+				}
+			})
+		})()
+
+
+	</script>
+</body>
+
+</html>

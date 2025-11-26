@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1 - Objetos</title>
+</head>
+<body>
+    <h1>Desafio 1 - Objetos</h1>
+    <p>Mostrar aonde joão mora com OBJETOS</p>
+
+    <script>
+        const endereco = {
+            rua: "Rua das Tulias",
+            numero: 302
+        }
+
+        const pessoa = {
+            nome: "João",
+            sobrenome: "Fagundes",
+            endereco
+        }
+
+        document.write(`${pessoa.nome} ${pessoa.sobrenome} mora em ${pessoa.endereco.rua}, N ${pessoa.endereco.numero}`)
+    </script>
+</body>
+</html>

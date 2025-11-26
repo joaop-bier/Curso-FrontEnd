@@ -1,0 +1,113 @@
+:root{
+    --cor-border_links:rgb(128, 128, 128);
+    --menu-color:rgba(26, 26, 26, 0.47);
+    --cor_title_component:rgb(179, 179, 179);
+    --cor-background_component:rgba(49, 51, 59, 0.6);
+    --color-orange:rgb(230, 103, 11);
+}
+
+/*
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;(Links)
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; (titulos)
+
+*/
+body{
+    color: white;
+    margin: 0px;
+    min-height: 100vh;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../imagens/bg-unsplash.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#menu_primacy{
+    flex-shrink: 0;
+    background-color: var(--menu-color);
+    flex-basis: 270px;
+    height: 100vh;
+    text-align: right;
+    position: sticky;
+    top: 0px;
+}
+
+#menu_primacy > img{
+    width: 150px;
+    margin: 20px 20px 10px;
+}
+
+nav#container_links-pags{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#menu_primacy > nav > .links_pags{
+    padding: 15px 0px;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid var(--cor-border_links);
+    width: 80%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+    transition-timing-function: ease-in-out;    
+}
+
+#menu_primacy > nav > .links_pags:not(#pag_atual):hover{
+    padding-right:  15px;
+    background-color: rgba(79, 79, 79, 0.492);   
+}
+
+#menu_primacy > nav > #pag_atual{
+    outline: 2px solid rgba(78, 78, 78, 0.681);
+    background-color: rgba(103, 96, 96, 0.695);
+    pointer-events: none;
+}
+
+main#main_components{
+    letter-spacing: 1px;
+    line-height: 20px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cor-background_component);
+}
+
+.section_component{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.section_component > .content_style{
+    margin-top: 5px;
+    padding: 30px 60px 0px 50px;
+}
+
+.style_orange{
+    color: var(--color-orange);
+}
+
+.section_component > .content_style > #title_component{
+    color: var(--cor_title_component);
+    font-size: 30px;
+}
+
+#destaque{
+    border-left: 1px solid var(--color-orange);
+    height: 140px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

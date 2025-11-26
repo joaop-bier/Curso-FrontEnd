@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 4 - Laços de repetição</title>
+</head>
+<body>
+    <h1>Desafio 4 - Laços de repetição</h1>
+    <p>Jogue dois dados quantas vezes forem necessárias até que a soma dos pontos dos dados seja par por 10 vezes. Quantas vezes os dados foram jogados?</p>
+
+    <script>
+        let contadorPar = 0
+        let contadorJogadas = 0
+
+        while(contadorPar < 10){
+            let dado1 = parseInt(Math.random() * 6) + 1
+            let dado2 = parseInt(Math.random() * 6) + 1
+            contadorJogadas ++
+
+            let soma = dado1 + dado2
+
+            if(soma % 2 === 0){
+                contadorPar++
+            }
+        }
+
+        alert("Foram necessárias " + contadorJogadas + " jogadas até sair 10 somas pares.")  
+    </script>
+</body>
+</html>

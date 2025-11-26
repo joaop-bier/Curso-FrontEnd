@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2 - Laços de repetição</title>
+</head>
+<body>
+    
+    <h1>Exercicio 2</h1>
+    <p>Quantas vezes seria necessário jogar os dois dados até que os dois números saiam repetidos?</p>
+
+    <script>
+        let dado1 = Math.floor(Math.random() * 6) + 1;
+        let dado2 = Math.floor(Math.random() * 6) + 1;
+
+        let contador = 1
+        while(dado1 != dado2 && dado2 != dado1){
+            dado1 = Math.floor(Math.random() * 6) + 1;
+            dado2 = Math.floor(Math.random() * 6) + 1;
+            contador++
+        }
+
+        alert(`Foi necessário ${contador} tentativas para os números sairem iguais`)
+    </script>
+</body>
+</html>

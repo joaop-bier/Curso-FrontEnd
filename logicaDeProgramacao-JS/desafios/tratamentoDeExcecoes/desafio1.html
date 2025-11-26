@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1 - Tratamento De Exceções</title>
+
+    <style>
+        #container-div{
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            flex-direction: column;
+        }
+
+        #camp-form{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #camp-form label{
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #camp-form select{
+            height: 30px;
+            color: rgb(162, 162, 255);
+            background-color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio 1 - Tratamento De Exceções</h1>
+    <p>Falar por usuário escolher qual área ele quer calcular(triângulo,quadrado,circulo,retângulo) e se der erro mostrar uma mensagem personalizadad(só no triangulo)! :^</p>
+
+    <div id="container-div">
+        <div id="camp-form">
+            <label for="figgeometrica">Escolha a forma geométrica que deseja: </label>
+            <select id="figgeometrica">
+                <option selected disabled>Selecione uma opção</option>
+                <option value="Triângulo">Triângulo</option>
+                <option value="Quadrado">Quadrado</option>
+                <option value="Círculo">Círculo</option>
+                <option value="Retângulo">Retângulo</option>
+            </select>
+        </div>
+        <button onclick="calcularArea()">Enviar</button>
+    </div>
+
+    <div id="resultado"></div>
+
+
+
+    <script>
+        let pi = Math.PI
+        let figselect = document.getElementById("figgeometrica")
+        let valor1, valor2, calc,mensagem
+        let output = document.getElementById("resultado")
+
+        
+        function calcularArea(){
+            let fig = figselect.value
+
+            switch(fig){
+
+                
+                case "Triângulo":
+
+                try{
+
+                    alert(`A figura geométrica escolhida foi ${fig}`)
+                    valor1 = Number(prompt("Digite a altura do " + fig))
+                    valor2 = Number(prompt("Digite a base do " + fig))
+                    
+                    if(isNaN(valor1) || isNaN(valor2)){
+                        throw new Error("Isso não é um número")
+                    }
+                    
+                    calc = ((valor2 * valor1) / 2)
+
+                    mensagem = `Á area do ${fig} é igual a ${calc.toFixed(2)}`
+                    
+                }catch(erro) {
+                    alert("Erro: " + erro.message)
+                    return
+                }
+                break;
+
+
+                case "Quadrado":
+                    alert(`A figura geométrica escolhida foi ${fig}`)
+                    valor1 = Number(prompt("Digite o lado do " + fig))
+                    valor2 = Number(prompt("Digite o outro lado do " + fig))
+
+                    calc = (valor1 * valor2)
+
+                    mensagem = `Á area do ${fig} é igual a ${calc.toFixed(2)}`
+                    break
+
+
+                case "Círculo":
+                    alert(`A figura geométrica escolhida foi ${fig}`)
+                    valor1 = Number(prompt("Digite o raio do " + fig))
+                    
+                    calc = (pi * (valor1 * valor1))
+
+                    mensagem = `Á area do ${fig} é igual a ${calc.toFixed(2)}`
+                    break
+
+
+                case "Retângulo":
+                    alert(`A figura geométrica escolhida foi ${fig}`)
+                    valor1 = Number(prompt("Digite a altura do " + fig))
+                    valor2 = Number(prompt("Digite a base do " + fig))
+                    
+                    calc = (valor1 * valor2)
+                    
+                    mensagem = `Á area do ${fig} é igual a ${calc.toFixed(2)}`
+                    break
+            }
+
+            output.innerHTML = mensagem
+        }
+
+
+    </script>
+</body>
+</html>

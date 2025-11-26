@@ -1,0 +1,36 @@
+.content_style > table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#table-padrao th, 
+#table-padrao tr:not(:last-child){
+    border-bottom: 2px solid rgb(39, 39, 40);
+}
+
+table td,table th{
+    padding: 16px;
+}
+
+table th{
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+}
+
+table td:last-child, table th:last-child{
+    text-align: right;
+}
+
+#table-zebrada > tbody tr:nth-child(odd){
+    background-color: rgb(39, 39, 40);
+}
+
+#table-zebrada_vertical td:not(:last-child),
+#table-zebrada_vertical th:not(:last-child){
+    border-right: 2px solid rgba(18, 17, 17, 0.719);;
+}
+
+#table-zebrada_vertical > tbody tr:nth-child(odd){
+    background-color: rgb(39, 39, 40);
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica de pseudo</title>
+
+    <style>
+        table{
+            background-color: rgb(255, 255, 255);
+            border-collapse: collapse;
+            font-size: 19px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        tr:nth-child(2n){
+            background-color: rgb(238, 238, 165);
+        }
+
+        thead > tr{
+            background-color: rgb(255, 187, 187);
+        }
+
+        thead > tr > th{
+            padding: 10px;
+        }
+
+        tbody > tr > td,th{
+            padding: 10px;
+        }
+
+        th,td{
+            border: 1px solid
+        }
+
+        tr:has(input[type="checkbox"]:checked){
+            background-color: rgb(212, 166, 255);
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">Informações usúario</th>
+            </tr>
+
+            <tr>
+                <th></th>
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>João</td>
+                <td>joao@email.com</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Maria</td>
+                <td>maria@email.com</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Lucas</td>
+                <td>lucas.silva@exemplo.com</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Ana Clara</td>
+                <td>ana.clara123@dominio.com</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Pedro Henrique</td>
+                <td>pedro.henrique@emailteste.com</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

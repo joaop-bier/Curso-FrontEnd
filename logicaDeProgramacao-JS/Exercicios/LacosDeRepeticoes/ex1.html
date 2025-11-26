@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios - Laços de repetição</title>
+</head>
+<body>
+    <h1>Exercicio - Laços de Repetição</h1>
+    <p>Pedir para o usuário digitar 1 número e mostrar a tabuada desse número de 0 à 10</p>
+
+    <script>
+        n = parseInt(prompt("Digite um número"))
+        contador = 0
+        
+        /* Foi usado document.write só porque é mais simples mas sei q ja é antigo, foi usado nesse exercicio porque também AINDA não sei DOM*/
+        while(contador <= 10){
+            document.write(`${n} * ${contador} = ${(n * contador)} <br>`)
+            contador++    
+        }
+        
+        document.write("Saiu do loop")
+    </script>
+</body>
+</html>

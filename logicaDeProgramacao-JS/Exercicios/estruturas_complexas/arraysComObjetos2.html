@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2 - Arrays com Objetos</title>
+
+    <style>
+        #products-mercado{
+            border-collapse: collapse;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+
+        th,td{
+            border: 1px solid black;
+        }
+
+        thead tr th{
+            padding: 5px 20px;
+            text-align: center;
+            background-color: rgb(240, 198, 198);
+            color: rgb(59, 56, 78);
+        }
+
+        tbody#products tr td{
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercicio 2 - Arrays com Objetos</h1>
+    <p>Dado um array contendo 3 objetos,cada um representando um produto, mostrar em uma tabela(Tag &lt;table&gt;)o nome, o preço e a quantidade em estoque de cada produto.</p>
+
+    <table id="products-mercado">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Estoque</th>
+            </tr>
+        </thead>
+
+        <tbody id="products">
+        </tbody>
+    </table>
+    <script>
+        let produtos = [
+        {nome: "Chocolate", preco: 3.50, estoque: 10},
+        {nome: "Refrigerante 2L", preco: 8.50, estoque: 20},
+        {nome: "Fini", preco: 5.50, estoque: 7}]
+
+        let mercado = document.getElementById("products")
+
+        for(i = 0; i < produtos.length; i++){
+            mercado.innerHTML +=    `<tr>
+                                     <td>${produtos[i].nome}</td>
+                                     <td>${produtos[i].preco}</td>
+                                     <td>${produtos[i].estoque}</td>
+                                     </tr>`
+        }
+    </script>
+</body>
+</html>

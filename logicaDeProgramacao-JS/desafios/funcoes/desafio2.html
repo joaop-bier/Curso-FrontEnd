@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2 - Funções</title>
+</head>
+<body>
+    <h1>Desafio 2 - Funções</h1>
+    <p>Crie uma função chamada calcular() que receba dois números e uma string com um dos seguintes valores: +, -, * ou /</p>
+    <p>Retorne a soma, subtração, multiplicação ou divisão dependendo o símbolo passado por parâmetro</p>
+
+
+    <script>
+        let num1 = Number(prompt("Digite um número: "))
+        let num2 = Number(prompt("Digite outro número: "))
+        let sinal = String(prompt("Digite o sinal da operação que deseja(+ - * /): "))
+
+        function calculo(n1,n2,sinalMat){
+            let calc
+
+            if(sinalMat == "+"){
+                calc = n1 + n2
+            }
+            else if(sinalMat == "-"){
+                calc = n1 - n2
+            }
+            else if(sinalMat == "*"){
+                calc = n1 * n2
+            }
+            else if(sinalMat == "/"){
+                calc = n1 / n2
+            }else {
+            calc = "Operação inválida!"
+            }
+
+            return calc
+        }
+        let resultado = calculo(num1,num2,sinal)
+        document.write(resultado)
+    </script>
+</body>
+</html>

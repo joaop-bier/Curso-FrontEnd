@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - Break VS continue</title>
+</head>
+<body>
+    <h1>Exercício 3</h1>
+    <p>Percorra um loop de 1 a 10 e interrompa a execução do loop quando o valor foi igual a 5(aparece no console.log)</p>
+    <p>Percorra um loop de 1 a 10 e pule a execução do loop quando o valor foi igual a 5(aparece no console.log)</p>
+
+    <script>
+        for(i = 0; i <= 10; i++){
+            console.log(i)
+
+            if(i === 5){
+                break
+            }
+        }
+
+        console.log("Fim do loop BREAK")
+        console.log("----------------")
+
+        for(i = 0; i <= 10; i++){
+            console.log(i)
+
+            if(i === 5){
+                continue
+            }
+        }
+
+        console.log("Fim do loop CONTINUE")
+    </script>
+</body>
+</html>

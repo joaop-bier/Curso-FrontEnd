@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2 - Funções PT2</title>
+</head>
+<body>
+    <h1>Desafio 2 - Funções PT2</h1>
+    <h2>Requisitos</h2>
+    <p>IMC = Peso / Altura(sobe 2)</p>
+    <p>deve retornar um único número</p>
+    <p>Deve gerar um erro se receber um parâmetro não número</p>
+    <p>deve retornar erro caso não receba nenhum parâmetro</p>
+
+    <script>
+        let calc = 0
+
+        function calcularIMC(peso,altura){
+                if(peso === undefined || altura === undefined){
+                    throw Error("Parâmetros VAZIOS")
+                }
+
+                else if(typeof peso !== "number" || typeof altura !== "number"){
+                    throw Error("Valores não correspondem com NÚMEROS")
+                }
+
+                else if(typeof(peso) === "number" && typeof(altura) === "number"){
+                    calc = peso / (altura ** 2)
+                        if(calc < 18.4){
+                            console.log(`você está com ${calc.toFixed(2)}: Abaixo do peso`)
+                        }
+                        else if(calc <= 24.9){
+                            console.log(`você está com ${calc.toFixed(2)}: Peso Normal`)
+                        }
+                        else if(calc > 25){
+                            console.log(`você está com ${calc.toFixed(2)}: Acima do Peso`)
+                        }
+                }
+
+            }
+
+        calcularIMC(53.40, 1.68)
+        calcularIMC(null,"rato")
+        calcularIMC()
+        
+        
+    </script>
+</body>
+</html>

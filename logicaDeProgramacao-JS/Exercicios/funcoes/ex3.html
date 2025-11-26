@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3 - Funções</title>
+</head>
+<body>
+    <h1>Exercicio 3 - Funções</h1>
+    <p>Escreva um programa para calcular a área de uma circunferência</p>
+
+    <label for="raioCirc">Raio</label>
+    <input type="number" name="raioCirc" id="raioCirc">
+    <button onclick="calcArea()">Calcular área</button>
+    <button onclick="limpar()">Clear</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        let pi = Math.PI
+        let raioCirc = document.getElementById("raioCirc")
+        let calc
+        let output = document.getElementById("resultado")
+
+        function calcArea(){
+            let raioValue = raioCirc.value
+            calc = pi * (raioValue * raioValue)
+            output.innerHTML = ""
+            output.innerHTML += `<br> A área da circunferência é ${calc.toFixed(2)}`
+        }
+
+        function limpar(){
+            output.innerHTML = ""
+        }
+
+
+    </script>
+</body>
+</html>

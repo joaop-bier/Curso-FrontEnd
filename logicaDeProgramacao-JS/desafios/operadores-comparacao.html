@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Desafio - Operadores De comparação</title>
+</head>
+<body>
+    <h1>Desafio - Operadores de comparação</h1>
+    <p>Pedir para o usuário digitar dois números entre 0 a 10 e mostrar na tela um boolean indicando se a média é maior que 7</p>
+
+    <script>
+        let nota1 = Number(prompt("Digite um número: "))
+        let nota2 = Number(prompt("Digite outro número: "))
+
+        let media = (nota1 + nota2) / 2
+        let verif_media = media > 7
+
+        alert("A média (" + media + ") é maior que 7? \n" + verif_media)
+    </script>
+</body>
+</html>

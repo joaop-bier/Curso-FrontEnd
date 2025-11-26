@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 4 - Funções</title>
+</head>
+<body>
+    <h1>Desafio 4 - Funções</h1>
+    <p>Criar uma função para verificar se o ano é bissexto</p>
+
+    <script>
+        function anobissexto(leapYear){
+            return (leapYear % 4 === 0 && leapYear % 100 != 0) || (leapYear % 400 == 0)
+
+        }
+        const ano = Number(prompt("Digite um ano: "))
+
+        const verificacao = anobissexto(ano)
+
+         document.write(`O ano ${ano} é bissexto?: ${verificacao}`)
+    </script>
+</body>
+</html>

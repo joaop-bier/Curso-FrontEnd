@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card usúario</title>
+
+    <style>
+
+        body{
+            min-height: 100vh;
+            margin: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-image: linear-gradient(45deg, purple 50%,blue);
+        }
+
+        #card_User{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: blueviolet;
+            padding: 20px;
+            border-radius: 20px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 10px solid color-mix(in srgb, yellow 30%, orange);
+        }
+
+        #card_User > div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #card_User > div > img{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="card_User">
+        <div>
+            <img src="fotoPerfil.jpg" alt="">
+        </div>
+        <h1>João</h1>
+        <p>Apaixonado por CSS criativo &#x1F49C</p>
+        <p>Front-end Dev &#x1F4BB</p>
+    </div>
+</body>
+</html>

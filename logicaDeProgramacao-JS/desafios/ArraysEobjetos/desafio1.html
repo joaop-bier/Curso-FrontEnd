@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1 - Arrays e Objetos</title>
+</head>
+<body>
+    <h1>Desafio 1 - Arrays e Objetos</h1>
+    <p>Dado um array que pode conter valores de tipos diferentes, mostre num alert a soma de todos eles</p>
+
+    <script>
+        let contador
+        let soma = 0
+        let numbers = [1,null,44,true,23,"Rato",55]
+        alert(`Números do array [${numbers}]`)
+        for(contador = 0; contador < numbers.length; contador++){
+            if(!isNaN(numbers[contador]) && typeof numbers[contador] === "number"){
+                soma += numbers[contador] 
+            }
+        }
+
+        alert("A soma de todos esses números do array é: " + soma)
+    </script>
+</body>
+</html>

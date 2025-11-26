@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Grid - Calculadora</title>
+
+    <style>
+
+        html, body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            margin: 0px;
+        }
+
+        body{
+            background-image: linear-gradient(to bottom, rgb(162, 162, 255) , rgb(41, 41, 105));
+        }
+
+        #container-calc{
+            background-color: rgb(67, 110, 169);
+            box-shadow: 8px 10px 8px rgba(29, 29, 29, 0.433);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #result{
+            color: white;
+            font-size: 30px;
+            padding: 10px;
+            text-align: right;
+            background-color: rgb(40, 40, 40);
+            margin-bottom: 30px;
+        }
+
+        #grid-calc{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 60px);
+            gap: 20px;
+            
+        }
+
+        .btn-calc{
+            background-color: rgb(47, 47, 47);
+            color: white;
+            padding: 18px;
+            font-size: 18px;
+        }
+
+        #gridItem-rowSpan{
+            
+            grid-row: span 2;
+        } 
+
+        #gridItem-colSpan{
+            grid-column: 1 / span 2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Calculadora</h1>
+    <div id="container-calc">
+        <div id="result">
+            0
+        </div>
+    <div id="grid-calc">
+        <button class="btn-calc">AC</button>
+        <button class="btn-calc">%</button>
+        <button class="btn-calc">x</button>
+        <button class="btn-calc">/</button>
+        <button class="btn-calc">7</button>
+        <button class="btn-calc">8</button>
+        <button class="btn-calc">9</button>
+        <button class="btn-calc">=</button>
+        <button class="btn-calc">4</button>
+        <button class="btn-calc">5</button>
+        <button class="btn-calc">6</button>
+        <button class="btn-calc">-</button>
+        <button class="btn-calc">1</button>
+        <button class="btn-calc">2</button>
+        <button class="btn-calc">3</button>
+        <button class="btn-calc" id="gridItem-rowSpan">+</button>
+        <button class="btn-calc" id="gridItem-colSpan">0</button>
+        <button class="btn-calc">,</button>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios 3 - Arrays com objetos</title>
+
+    <style>
+        ul {
+            list-style-type: disc;   /* garante bolinha */
+            padding-left: 20px;     /* espaço pra mostrar */
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercicios 3 - Arrays com objetos</h1>
+    <p>Mostre na tela as seguintes informações</p>
+    <ul>
+        <li>Nome</li>
+        <li>Lista com as notas</li>
+        <li>Média</li>
+        <li>Aprovado/reprovado</li>
+    </ul>
+
+    <div id="output">
+    </div>
+
+    <script>
+    let output = document.getElementById("output")
+ 
+    let aluno = {
+        nome: "Antônio Santos",
+        notas: [7, 8, 5, 8]
+    }
+ 
+    output.innerHTML += `<h1>Nome: ${aluno.nome}</h1>`
+    output.innerHTML += `<h2>Notas: </h2>`
+    let lista = "<ul>"
+    let soma = 0
+ 
+    for (i = 0; i < aluno.notas.length; i++) {
+        soma += aluno.notas[i]
+        lista += `<li>${aluno.notas[i]}</li>`
+    }
+    let media = soma / aluno.notas.length
+    lista += "</ul>"
+    output.innerHTML += lista;
+ 
+    output.innerHTML += "<p>Média: " + media.toFixed(1) + "</p>"
+ 
+    let aprovado = (media >= 7) ? "Sim" : "Não"
+ 
+    output.innerHTML += "Aprovado? " + aprovado
+ 
+</script>
+</body>
+</html>

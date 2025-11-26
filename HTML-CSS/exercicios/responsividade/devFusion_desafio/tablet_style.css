@@ -1,0 +1,33 @@
+@media screen and (min-width: 500px) and (max-width:950px) {
+    #hero-container > #hero-content img{
+        width: 300px;
+    }
+
+    section{
+        padding: 40px;
+        
+    }
+    #servicos > #habilites-developer .cards-habilites{
+        width: 135px;
+        height: 230px;
+    }
+
+    #habilites-developer .cards-habilites > h3{
+        font-size: 1.7rem;
+    }
+
+    #projects > #container-projects .cards-projects{
+        width: 220px;
+    }
+
+    #project-netflix:popover-open,#project-twitter:popover-open{
+        height: 800px;
+        overflow: auto;
+    }
+
+    .projects-popover > img{
+        width: 420px;
+        border-radius: 10px;
+    }
+
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando switch</title>
+
+    <style>
+        body{
+            margin: 0px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        input{
+            position: absolute;
+            margin: 0px;
+            padding: 0px;
+            height: 1px;
+            width: 1px;
+            opacity: 0;
+        }
+
+        label{
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        input[type="checkbox"]:focus + label #switch_background{
+            outline: 2px solid black;
+        }
+
+        input[type="checkbox"] + label #switch_background{
+            display: inline-block;
+            height: 20px;
+            width: 40px;
+            border-radius: 10px;
+            outline: 1px solid;
+            margin-right: 10px;
+            transition-duration: 0.123s;
+            transition-property: background-color;
+            transition-timing-function: linear;
+        }
+
+        #switch_ball{
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            transition-duration: 0.3s;
+            transition-timing-function: linear;
+        }
+
+        input[type="checkbox"]:not(:checked) + label #switch_background{
+            background-color: rgb(171, 171, 171);
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+        input[type="checkbox"]:not(:checked) + label #switch_background > #switch_ball{
+            background-color: white;
+        }
+
+        input[type="checkbox"]:checked + label #switch_background{
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+
+        input[type="checkbox"]:checked + label #switch_background > #switch_ball{
+            background-color: rgb(171, 171, 171);
+        }
+
+        
+    </style>
+
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <input type="checkbox" name="html" id="html">
+        <label for="html">
+        <span id="switch_background">
+            <span id="switch_ball"></span>
+        </span>
+            HTML
+        </label>
+
+        <input type="checkbox" name="css" id="css">
+        <label for="css">
+        <span id="switch_background">
+            <span id="switch_ball"></span>
+        </span>
+            CSS
+        </label>
+
+        <input type="checkbox" name="js" id="js">
+        <label for="js">
+        <span id="switch_background">
+            <span id="switch_ball"></span>
+        </span>
+            JAVASCRIPT
+        </label>
+    </div>
+
+</body>
+</html>

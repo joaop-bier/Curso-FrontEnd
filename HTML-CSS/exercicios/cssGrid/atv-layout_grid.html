@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Grid</title>
+
+    <style>
+        #grid-container{
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 80px 60px 300px 60px;
+            grid-template-areas: 
+            "header header header"
+            "nav nav ."
+            "main main aside"
+            "footer footer aside";
+        }
+
+        .grid-item{
+            background-color: chocolate;
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header{
+            grid-area: header;
+        }
+
+        .nav{
+            grid-area: nav;
+        }
+
+        .main{
+            grid-area: main;
+        }
+
+        .aside{
+            grid-area: aside;
+        }
+
+        .footer{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid-container">
+        <header class="header grid-item" >header</header>
+        <nav class="nav grid-item">nav</nav>
+        <main class="main grid-item">main</main>
+        <aside class="aside grid-item">aside</aside>
+        <footer class="footer grid-item">footer</footer>
+    </div>
+</body>
+</html>

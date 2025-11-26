@@ -1,0 +1,49 @@
+:root{
+    --color-1: #6D7CAD;
+    --color-2: #50462B;
+    --color-3: #5A7BED;
+    --color-4: #988D6D;
+    --color-5: #60636E;
+    --color-6: #433F33;
+}
+
+body{
+    background-image: url('imgs/fundo-black-yellow.webp');
+    background-repeat: no-repeat;
+    background-size: 99vw;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+div{
+    background-color: rgb(245, 212, 161);
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    width: 700px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+#perfil-curriculo{
+    width: 600px;
+    display: flex;
+}
+
+img{
+    border-radius: 80%;
+}
+
+img, h1{
+    display: inline-block;
+    align-items: center;
+}
+
+h1{
+    color: var(--color-1);
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+}

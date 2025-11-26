@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3 - Laços de repetição</title>
+</head>
+<body>
+    <h1>Desafio 3 - Laços de repetição</h1>
+    <p>Mostre na tela todos os anos a partir de 1004 até o ano 2024, pulando de quatro em quatro anos.</p>
+    <p>por exemplo: <br>
+    1004 <br>
+    1008 <br>
+    1012</p>
+    <p>E assim por diante</p>
+    <p>É como mostrar os anos bissextos, mas sem as regras para descobrir se um ano é bissexto ou não.(Vamos imaginar que se o ano é múltiplo de quatro, ele é bissexto)</p>
+
+    <script>
+        alert("No sua guia irá ser mostrado todos os anos bissextos de 1004 até 2024(Vamos imaginar que se o ano é múltiplo de quatro, ele é bissexto)")
+
+        for(i = 1004; i <= 2024; i++){
+            if(i % 4 == 0){
+                document.write(i + " <br> ")
+            }
+        }
+
+        document.write("Fim do Loop...UFA...")
+    </script>
+</body>
+</html>

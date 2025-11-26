@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Desafio Loja</title>
+<style>
+    /*Estilo feito pela CHAT GPT por desafios(padrão style)*/
+  body { font-family: Arial; background: #eef0ff; padding: 40px; }
+  .box { width: 650px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; }
+  .item { border: 1px solid #ddd; border-radius: 8px; padding: 10px; margin: 10px 0; }
+  .title { font-size: 20px; font-weight: bold; }
+  .row { display: flex; gap: 8px; }
+  button { padding: 6px 10px; border-radius: 6px; border: none; background: #4f46e5; color: #fff; }
+  .qty { font-size: 14px; margin-top: 4px; color: #555; }
+
+  /* Estilo feito por mim */
+
+  #product-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #9ba3aa91;
+    margin-top: 20px;
+  }
+  
+  .products{
+    margin: 10px;
+    background-color: rgb(217, 219, 230);
+    padding: 10px;
+  }
+  .products .name{
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .products .price{
+    font-size: 17px;
+    color: rgb(0, 128, 0);
+  }
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Desafio 2 — Mini Loja</h2>
+
+  <form id="form-product" class="row">
+    <input id="pname" type="text" placeholder="Produto">
+    <input id="pprice" type="number" placeholder="Preço">
+    <input id="pstock" type="number" placeholder="Estoque inicial">
+    <button>Adicionar</button>
+  </form>
+
+  <div id="product-list"></div>
+</div>
+
+<script>
+
+    /*
+Objetivo
+
+Criar uma função construtora Product que armazena:
+
+nome
+
+preço
+
+estoque
+
+método sell(n) reduzindo o estoque
+
+método restock(n) aumentando o estoque
+
+HTML mostra cards do produto.
+*/
+
+
+  // TODO 1 — Criar função construtora Product(name, price, stock)
+  // stock default = 0
+  // criar métodos:
+  // - this.sell(qtd)
+  // - this.restock(qtd)
+  function Product(name, price, stock){
+    this.name = name
+    this.price = price
+    this.stock = stock || 0
+  }
+
+
+  // TODO 2 — array products contendo instâncias de Product
+  let products = []
+
+
+  // TODO 3 — addProduct(name, price, stock)
+  function addProduct(name,price,stock){
+        const newProduct = new Product(name, price, stock)
+
+        products.push(newProduct)
+        return console.log(products)
+  }
+
+
+  // TODO 4 — render()
+  function render(){
+    products.forEach(function(Product){
+        
+        const product = document.createElement("div")
+        product.classList = "products"
+
+        const titleProduct = document.createElement("h1")
+        titleProduct.textContent = Product.name
+        titleProduct.classList = "name"
+
+        const productPrice = document.createElement("p")
+        productPrice.textContent = "R$ " + Product.price
+        productPrice.classList = "price"
+
+        const productStock = document.createElement("p")
+        productStock.textContent = "Estoque Disponível: " + Product.stock
+        productStock.classList = "qty"
+
+        product.append(titleProduct, productPrice, productStock)
+        productList.append(product)
+    })
+  }
+  const addbttn = document.querySelector("#form-product button")
+  const productList = document.getElementById("product-list")
+
+  addbttn.addEventListener("click",function(obj){
+    obj.preventDefault()
+
+    let nameProduct = document.querySelector("#form-product #pname").value
+    let priceProduct = document.querySelector("#form-product #pprice").value
+    let stockProduct = document.querySelector("#form-product #pstock").value
+
+    addProduct(nameProduct, priceProduct, stockProduct)
+
+    productList.innerHTML = "";
+    render()
+    
+  })
+</script>
+
+</body>
+</html>

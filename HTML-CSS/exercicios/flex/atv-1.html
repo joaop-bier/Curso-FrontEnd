@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica-flex-pt.1</title>
+
+    <style>
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 97vh;
+        }
+
+        #galeria-fotos{
+            border: 2px solid black;
+            border-radius: 10px;
+            height: 90%;
+            width: 35%;
+            padding: 10px 50px
+        }
+
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #sessao-fotos{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        img{
+            margin: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    
+    Objetivo: Criar 6 cartões (divs) dentro de um container que se quebram de linha, se centralizam no eixo principal e usam gap.
+
+    -->
+
+    <div id="galeria-fotos">
+
+        <header>
+            <h1>Galeria de fotos</h1>
+        </header>
+
+        <main>
+            <section id="sessao-fotos">
+                <article>
+                    <img src="imgs-atv-1/1.jpg" alt="">
+                    <img src="imgs-atv-1/17.jpg" alt="">
+                    <img src="imgs-atv-1/28.jpg" alt="">
+                    <img src="imgs-atv-1/34.jpg" alt="">
+                    <img src="imgs-atv-1/49.jpg" alt="">
+                    <img src="imgs-atv-1/57.jpg" alt="">
+                    <img src="imgs-atv-1/6.jpg" alt="" style="width: 128px; height:128px; ">
+                    <img src="imgs-atv-1/83.jpg" alt="">
+                    <img src="imgs-atv-1/foto_1.jpg" alt="">
+                </article>
+            </section>
+        </main>
+
+    </div>
+</body>
+</html>

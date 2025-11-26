@@ -1,0 +1,27 @@
+#container{
+    background-color: rgb(167, 248, 221);
+    padding: 10px;
+
+    /* esse overflox ta sendo usado da forma errada! */
+    overflow: auto;
+}
+
+#container > div{
+    background-color: rgb(246, 131, 131);
+    margin: 10px;
+    width: 50px;
+    padding: 20px;
+}
+
+#div1{
+    float: left;
+}
+
+#div2{
+    float: right;
+    clear: left;
+}
+
+ #div3{
+    clear: both;
+ }

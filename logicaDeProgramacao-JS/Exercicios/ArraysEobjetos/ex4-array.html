@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4 - Arrays</title>
+</head>
+<body>
+    <h1>Exercicio 4 - Arrays</h1>
+    <p>Dado um array de números, mostre num alert a soma de todos eles</p>
+
+    <script>
+        let contador
+        let soma = 0
+        let numbers = [1,44,23,55]
+        alert(`Números do array [${numbers}]`)
+        for(contador = 0; contador < numbers.length; contador++){
+            soma += numbers[contador]
+        }
+
+        alert("A soma de todos esses números do array é:" + soma)
+    </script>
+</body>
+</html>

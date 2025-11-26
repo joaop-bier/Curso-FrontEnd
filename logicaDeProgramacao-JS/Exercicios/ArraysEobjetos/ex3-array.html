@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3 - Arrays</title>
+</head>
+<body>
+    <h1>Exercicio 3 - Arrays</h1>
+    <p>Dado um array contendo os dias da semana, mostre em um alert qual é o dia atual</p>
+
+    <script>
+        let diasDaSemana = ["Domingo","Segunda-feira","Terça-Feira","Quarta-Feira","Quinta-Feira","Sexta-Feira","Sábado"]
+        let dias = new Date()
+
+        let indiceDay = dias.getDay()
+        alert("Hoje é: " + diasDaSemana[indiceDay])
+    </script>
+</body>
+</html>

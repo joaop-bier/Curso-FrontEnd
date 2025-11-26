@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design lista</title>
+
+    <style>
+        body{
+            margin: 0px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section{
+            display: flex;
+            background-color: rgb(159, 149, 255);
+            width: 200px;
+            flex-direction: column;
+        }
+
+        h1{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul li{
+            font-size: 20px;
+            margin-top: 5px;
+        }
+
+        li[class="feito"]::marker{
+            color: rgb(43, 255, 0);
+            font-size: 20px;
+        }
+
+        li[class="feito"]{
+            color: green;
+        }
+
+        li[class="andamento"]{
+            color: yellow;
+        }
+
+        li[class="andamento"]::marker{
+            color: rgb(137, 137, 18);
+        }
+
+        li[class="mal_feito"]{
+            color: red;
+        }
+
+        li[class="mal_feito"]::marker{
+            color: rgb(141, 21, 21);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <header><h1>Daily to do list</h1></header>
+
+            <article>
+                <ul>
+                    <li class="feito">Item 1</li>
+                    <li class="andamento">Item 2</li>
+                    <li class="feito">Item 3</li>
+                    <li class="andamento">Item 4</li>
+                    <li class="feito">Item 5</li>
+                    <li class="mal_feito">Item 6</li>
+                    <li class="feito">Item 7</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

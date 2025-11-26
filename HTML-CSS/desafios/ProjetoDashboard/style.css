@@ -1,0 +1,222 @@
+:root{
+    --color-primary: #5A5A5F;
+    --color-primary-57: #5a5a5f93;
+    --color-primary-43: #80808070;
+    --color-secondary: #004EDA;
+    --default-left: 30px;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(fonts/Poppins/Poppins-Regular.ttf);
+}
+
+body{
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 250px repeat(2, 1fr);
+    grid-template-rows: 100px repeat(2, 1fr);
+    grid-template-areas: 
+    "header-menu info-header info-header"
+    "header-menu main main"
+    "header-menu main main";
+}
+
+#menu-dashboard{
+    grid-area: header-menu;
+    margin-left: var(--default-left);
+}
+
+#menu-links{
+    position: sticky;
+    top: 0px;
+    max-height: 100vh;
+}
+
+#menu-links nav{
+    padding-top: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.8rem;
+    min-height: 100vh;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0px;
+}
+
+#menu-links nav #brand-home{
+    font-size: 3.5rem;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#menu-links nav .nav-link{
+    top: 1px;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition-duration: 0.7s;
+    transition-delay: 0.3s;
+    transition-timing-function: ease;
+}
+
+#menu-links nav .nav-link:hover{
+    text-decoration: underline;
+    transform: translateX(60px) scale(1.4);
+}
+
+#menu-links nav .auto-top{
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+
+.space-right{
+    margin-right: 10px;
+}
+
+#header-info-user{
+    grid-area: info-header;
+    padding: 10px 20px 10px;
+    margin-left: var(--default-left);
+}
+
+#container-user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#action-user{
+    display: flex;
+    gap: 30px;
+}
+
+#action-user .links-user{
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+#action-user .links-user:hover{
+    text-decoration: underline;
+}
+
+#info-user{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.space-items{
+    margin-bottom: 40px;
+}
+
+#info-user #img-user{
+    width: 60px;
+}
+
+#user-description #name-user{
+    font-size: 2.2rem;
+}
+
+#user-description #job-user{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-primary-57);
+}
+
+#grid-main{
+    background-color: var(--color-primary-43);
+    grid-area: main;
+    padding: 40px 60px 20px;
+    margin-left: var(--default-left);
+}
+
+.background-section{
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#summary-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 10px;
+    gap: 15px;
+}
+
+.card-summary{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.summary-title{
+    margin: 0px;
+    font-size: 1.6rem;
+    color: var(--color-primary);
+}
+
+.summary-value{
+    margin: 0px;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--color-secondary);
+}
+
+.separate{
+    border-right: 1px solid var(--color-primary-57);
+    align-self: stretch;
+}
+
+#see-more{
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: white;
+    background-color: var(--color-secondary);
+    padding: 10px;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+}
+
+#see-more:hover{
+    background-color: #0038a0;
+}
+
+#charts-section{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+#card-chart-main{
+    width: 100%;
+}
+
+#card-chart-main #chart-img-main{
+    width: 100%;
+}
+
+.card-chart-secondary{
+    flex: 1 0 calc(50% - 20px);
+}
+
+.card-chart-secondary .chart-img-secondary{
+    width: 100%;
+}

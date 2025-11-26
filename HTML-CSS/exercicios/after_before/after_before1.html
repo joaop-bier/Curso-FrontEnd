@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After e Before 1.0</title>
+
+    <style>
+        body{
+            margin: 0px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(246, 246, 189);
+        }
+
+        div{
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgba(108, 108, 108, 0.615);
+            border-left: 8px solid rgb(213, 213, 7);
+            border-radius: 10px;
+            padding: 10px 20px;
+        }
+
+        #title-principal::before{
+            content: "🔔 ";
+        }
+
+        #title-principal::after{
+            content: " 🔔";
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1 id="title-principal">Aviso Importante</h1>
+        <hr>
+        <p>Esse é um exemplo de uso do before e after</p>
+    </div>
+
+</body>
+</html>

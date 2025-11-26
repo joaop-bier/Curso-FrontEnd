@@ -1,0 +1,126 @@
+#formulario_container{
+    display: flex;
+    align-items: center;
+}
+
+.section_component > .remove-padding{
+    padding-right: 0;
+}
+
+fieldset{
+    border: 0px solid;
+}
+
+legend{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.form_content{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+}
+
+.form_content > #user_info{
+    display: flex;
+    gap: 30px;
+}
+
+.form_content > #user_info input{
+    width: 250px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form_content input,
+.form_content textarea,
+.form_content select{
+    outline: 0px;
+    background-color: rgb(84, 88, 99);
+    color: white;
+    border: 2px solid rgba(46, 46, 46, 0.915);
+}
+
+.form_content > #user_info input::placeholder{
+    color: rgba(215, 215, 215, 0.662);
+}
+.form_content > #user_info input:focus:valid{
+    border-bottom: 2px solid green;
+}
+
+.form_content input:focus:invalid{
+    border-bottom: 2px solid red;
+}
+
+.form_content .container_dados_form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form_content .container_dados_form > textarea{
+    height: 120px;
+    resize: none;
+}
+
+.form_content input[type="submit"],
+.form_content input[type="reset"]{
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    transition-delay: 0.3s;
+}
+
+
+input[type="reset"]{
+    background-color: rgb(174, 174, 174);
+    color: rgb(0, 0, 0);
+}
+
+#input_submit-contact{
+    margin-left: auto;
+}
+
+#informacoes_contato{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 200px;
+    width: 350px;
+}
+
+#opcoes-linguagens{
+    display: inline-block;
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.field-group{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.container_prioridade{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+
+.checkbox_validacoes{
+    display: flex;
+    gap: 10px;
+}
+
+#container_inputs{
+    margin-top: 10px;
+    display: flex;
+    gap: 40px;
+}

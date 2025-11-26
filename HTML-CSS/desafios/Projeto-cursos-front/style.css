@@ -1,0 +1,95 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-image: url('imagens/bg-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    height: 500px;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+a.links-menu{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    background-color: rgb(147, 147, 147);
+    color: rgb(255, 255, 255);
+    padding: 7px;
+    border: 2px solid rgb(255, 255, 255);
+    margin: 0px 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+}
+
+a.links-menu:hover{
+    background-color: rgb(79, 79, 79);
+    padding: 9px;
+    font-size: 20px;
+    transition-duration: 1s;
+}
+
+h1{
+    margin: 80px 0px 20px 0px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: -4px 1px 4px  black;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+p#p-header{
+    background-color: rgba(0, 0, 0, 0.594);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 10px;
+    border-bottom: 4px solid rgb(255, 255, 255);
+}
+
+main{
+    margin: auto;
+    text-align: justify;
+    min-width: 400px;
+    max-width: 600px;
+}
+
+section{
+    background-color: rgb(192, 190, 182);
+    padding: 15px;
+    margin: 20px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+p.p-section{
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+a.a-section{
+    background-color: rgb(181, 154, 154);
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a.a-section:hover{
+    text-decoration: underline;
+    padding: 10px;
+    font-size: 22px;
+    transition-duration: 1s;
+}

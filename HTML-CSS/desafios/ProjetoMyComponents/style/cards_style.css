@@ -1,0 +1,52 @@
+.container-cards{
+    display: flex;
+    gap: 20px;
+    letter-spacing: 2px;
+    line-height: 25px;
+}
+
+.cards{
+    background-color: rgb(70, 71, 85);
+    padding-bottom: 5px;
+    border-radius: 5px ;
+}
+
+.cards img{
+    border-radius: 5px 5px 0px 0px;
+}
+
+.content-cards{
+    margin: 20px;
+}
+
+#one-card{
+    width: 600px;
+}
+
+#one-card > #img_width-600px{
+    width: 100%;
+}
+
+.two_cards{
+    width: 450px;
+}
+
+.two_cards > .img_width-450px{
+    width: 100%;
+}
+
+.three_cards{
+    width: 300px;
+}
+
+.three_cards > .img_width-300px{
+    width: 100%;
+}
+
+.four_cards{
+    width: 220px;
+}
+
+.four_cards > .img_width-200px{
+    width: 100%;
+}

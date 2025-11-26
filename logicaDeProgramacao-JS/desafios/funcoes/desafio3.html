@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3 - Funções</title>
+</head>
+<body>
+    <h1>Desafio 3 - Funções</h1>
+    <p>Crie uma função que retorne um booleano se um número é par</p>
+
+    <script>
+        let num = Number(prompt("Digite um número: "))
+
+        while(!isNaN(num) == false){
+            alert("Valor inserido INVÁLIDO!!!!!!")
+            alert("Digite novamente....")
+            num = Number(prompt("Digite um número: "))
+        }
+        function verifPar(n){
+                if(n % 2 === 0 && !isNaN(n)){
+                    return true
+                }else{
+                    return false
+                }
+            }         
+
+        let resultado = verifPar(num)
+        alert(resultado)
+    </script>
+</body>
+</html>

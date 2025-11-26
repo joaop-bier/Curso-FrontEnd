@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            border-collapse: collapse;
+        }
+
+        th,td{
+            border: 1px solid black;
+        }
+
+        thead{
+            background-color: rgb(255, 255, 150);
+            text-align: center;
+        }
+
+        thead > tr > th{
+            width: 180px;
+            padding: 12px;
+        }
+
+        tbody > tr > th{
+            padding: 35px 100px;
+        }
+
+        tbody > tr > td{
+            text-align: center;
+        }
+
+        tfoot > tr > td{
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Área</th>
+                <th>Curso</th>
+                <th>Investimento</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th rowspan="3">Design</th>
+                <td>InDesign</td>
+                <td>R$1000,00</td>
+            </tr>
+
+            <tr>
+                <td>Photoshop</td>
+                <td>R$1000,00</td>
+            </tr>
+
+            <tr>
+                <td>Illustrator</td>
+                <td>R$1000,00</td>
+            </tr>
+
+            <tr>
+                <th rowspan="3">Development</th>
+                <td>HTML</td>
+                <td>R$1000,00</td>
+            </tr>
+
+            <tr>
+                <td>CSS</td>
+                <td>R$1000,00</td>
+            </tr>
+
+            <tr>
+                <td>JavaScript</td>
+                <td>R$1000,00</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3">Valores Sujeitos a alterações sem prévio aviso</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmulario Login pt.2</title>
+
+    <style>
+        html,body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        body{
+            margin: 0px;
+            background-image: linear-gradient(120deg,rgb(61, 61, 255),rgb(164, 191, 255));
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        form{
+            background-color: rgb(249, 249, 249);
+            border-radius: 20px;
+            margin-top: 10px;
+            
+        }
+
+        fieldset{
+            border: 0px solid;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-top: 10px;
+            padding: 20px 20px;
+            gap: 10px;
+            max-width: 270px;
+            height: 530px;
+        }
+
+        legend{
+            font-size: 25px;
+            text-align: center;
+        }
+
+        label{
+            color: rgb(58, 58, 58);
+        }
+
+        input{
+            border: 1px solid rgba(131, 131, 131, 0.459);
+            padding: 12px 10px;
+            border-radius: 30px;
+        }
+
+        #radio-genero{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #termos_accept{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cadastro_submit{
+            background-image: linear-gradient(to right,rgb(61, 61, 255) 55%,rgb(164, 191, 255));
+            font-size: 19px;
+            color: white;
+        }
+
+        select{
+            border: 1px solid rgba(131, 131, 131, 0.459);
+            padding: 12px 10px;
+            border-radius: 30px;
+        }
+
+        #check_gostou{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #check_gostou > label{
+            margin: 0px 5px;
+            text-align: center;
+        }
+
+        textarea{
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Cadastro de Usuário</legend>
+
+            <label for="name">Nome completo</label>
+            <input type="text" name="user_name" id="name" placeholder="João Antonio" required>
+
+            <label for="email">Email</label>
+            <input type="email" name="user_email" id="email" placeholder="Teste@gmail.com" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" name="user_password" id="senha" placeholder="joao123" required>
+
+            <label for="data">Data de nascimento</label>
+            <input type="date" name="user_date" id="data" required>
+
+            <label>Gênero</label>
+
+            <div id="radio-genero">
+                <label>
+                    <input type="radio" name="user_genero" id="genero" value="Masculino" required>Masculino
+                </label>
+
+                <label>
+                    <input type="radio" name="user_genero" id="genero" value="Feminino" required>Feminino
+                </label>
+                
+                <label>
+                    <input type="radio" name="user_genero" id="genero" value="Outro" required>Outro
+                </label>
+            </div>
+           
+            <div id="termos_accept">
+                <label for="termos">Aceito os termos: </label>
+                <input type="checkbox" id="termos" required>
+            </div>
+
+            <input type="submit" value="Cadastrar" class="cadastro_submit">
+        </fieldset>
+    </form>
+
+    <form action="" method="get">
+        <fieldset>
+            <legend>Feedback do Site</legend>
+
+            <label for="NameUser">Nome</label>
+            <input type="text" id="NameUser" name="NameUser_Feed" required>
+
+            <label for="EmailUser">Email</label>
+            <input type="email" id="EmailUser" name="EmailUser_Feed" required>
+
+            <label for="select_feed">Avaliação</label>
+            <select name="avaliação" id="select_feed">
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+
+            <label>O que você gostou?</label>
+
+            <div id="check_gostou">
+                <label for="design_gostou"><input type="checkbox" id="design_gostou">Design</label>
+                <label for="conteudo_gostou"><input type="checkbox" id="conteudo_gostou">Conteúdo</label>
+                <label for="velocidade_gostou"><input type="checkbox" id="velocidade_gostou">Velocidade</label>
+                <label for="outro_gostou"><input type="checkbox" id="outro_gostou">Outro</label>
+            </div>
+
+            <label for="user_comentarios">Comentários</label>
+            <textarea name="Coment" id="user_comentarios" ></textarea>
+
+            <input type="submit" value="Cadastrar" class="cadastro_submit">
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de contato</title>
+
+    <style>
+
+        html,body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        body{
+            padding: 0px;
+            background-color: rgb(33, 33, 33);
+            color: white;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        form{
+            background-color: rgba(22, 22, 22, 0.79);
+            border-radius: 10px;
+        }
+
+        fieldset{
+            border: 0px solid;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            width: 400px;
+        }
+
+        legend{
+            text-align: center;
+            font-size: 23px;
+            font-weight: 500;
+            color: rgb(118, 118, 118);
+        }
+
+        input{
+            border: 1px solid rgb(76, 76, 76);
+            padding: 8px 5px;
+            color: white;
+            background-color: rgb(0, 0, 0);
+        }
+
+        input,textarea{
+            border-bottom: 2px solid rgba(255, 255, 255, 0.637);
+            outline: 0;
+        }
+
+        textarea{
+            color: white;
+            background-color: rgb(0, 0, 0);
+            resize: none;
+        }
+
+        #input_submit{
+            width: 120px;
+            margin-left: auto;
+        }
+
+        input:invalid:focus,textarea:invalid:focus{
+            border-bottom: 2px solid rgb(187, 0, 0);
+        }
+
+        input:valid:focus,textarea:valid:focus{
+            border-bottom: 2px solid rgb(0, 136, 7);
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="" method="get">
+        <fieldset>
+            <legend>Formulário de contato</legend>
+
+            <label for="name">Seu Nome</label>
+            <input type="text" id="name" name="user_name" placeholder="Digite seu nome completo" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="user_email" placeholder="Digite um email válido" required>
+
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="user_assunto">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea name="user_mensagem" id="mensagem" rows="10" cols="30" minlength="30" required></textarea>
+
+            <input type="submit" value="Enviar" id="input_submit">
+        </fieldset>
+    </form>
+
+</body>
+</html>

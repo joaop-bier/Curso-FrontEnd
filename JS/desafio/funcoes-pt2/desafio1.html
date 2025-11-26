@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Funções PT2</title>
+
+</head>
+<body>
+    <h1>Desafio 1 - Funções PT2</h1>
+
+    <h2>Construir uma função para calcular média</h2>
+    <p style="color: blue;">Requisitos</p>
+    <p>Pode receber um ou mais valores numéricos</p>
+    <p>Deve retornar um único número</p>
+    <p>Deve gerar um erro se receber um parâmetro não número</p>
+    <p>Deve retornar zero caso não receba nenhum parâmetro</p>
+
+
+    <script>
+        function calcularMedia(){
+            if(arguments.length === 0){
+                return 0;
+            }
+
+            let soma = 0
+
+            for(let i = 0; i < arguments.length; i++){
+                if(typeof(arguments[i]) !== 'number' || isNaN(arguments[i])){
+                    throw Error("Valores passados não são NÚMEROS!!!!")
+                }
+
+                soma += arguments[i]
+            }
+            return soma / arguments.length
+        }
+
+
+        console.log(calcularMedia(8.5,9,5))
+        console.log(calcularMedia()); // 0
+        console.log(calcularMedia("rato", 9, 5)); // Erro
+        
+    </script>
+</body>
+</html>
